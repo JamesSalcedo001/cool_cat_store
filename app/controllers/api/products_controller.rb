@@ -1,2 +1,4 @@
-class ProductsController < ApplicationController
+module Api
+    class ProductsController < ApplicationController
+    end
 end

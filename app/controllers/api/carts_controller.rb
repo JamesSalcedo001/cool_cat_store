@@ -1,2 +1,4 @@
-class CartsController < ApplicationController
+module Api
+    class CartsController < ApplicationController
+    end
 end
