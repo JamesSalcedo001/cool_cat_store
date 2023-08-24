@@ -1,25 +1,20 @@
 import './App.css'
-import { useState, useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
+import Checkout from "./Checkout";
 
 
 function App() {
-  const [count, setCount] = useState(0)
-
-  useEffect(() => {
-    fetch("/api/hello")
-      .then((r) => r.json())
-      .then((data) => setCount(data.count));
-  }, []);
 
   return (
     <div className="App">
         <Routes>
-          <Route path="/testing" element={<h1>Test Route</h1>} />
-          <Route path="/" element={<h1>Page Count: {count}</h1>}/>
+          <Route path="/checkout_page" element={<Checkout/>} />
+          <Route path="/" element={<h1>Test Route</h1>} />
         </Routes>    
     </div>
   )
 }
 
 export default App
+
+

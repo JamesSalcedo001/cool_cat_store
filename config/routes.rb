@@ -4,8 +4,9 @@ Rails.application.routes.draw do
   # resources :products
   # resources :users
 
-  
-  get '/api/hello', to: 'application#hello_world'
+  namespace :api do
+  post '/checkout', to: "checkout#create"
+  end
 
   get '*path',
   to: 'fallback#index',
