@@ -1,6 +1,6 @@
 import './App.css'
 import { Route, Routes } from "react-router-dom";
-import Checkout from "./Checkout";
+import ProductsList from './ProductsList';
 
 
 function App() {
@@ -8,7 +8,7 @@ function App() {
   return (
     <div className="App">
         <Routes>
-          <Route path="/checkout_page" element={<Checkout/>} />
+          <Route path="/products_list" element={<ProductsList/>} />
           <Route path="/" element={<h1>Test Route</h1>} />
         </Routes>    
     </div>

@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   # resources :users
 
   namespace :api do
-  post '/checkout', to: "checkout#create"
+    post '/checkout', to: "checkout#create"
   end
 
   get '*path',
