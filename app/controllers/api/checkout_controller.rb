@@ -9,8 +9,10 @@ module Api
                 quantity: 1,
               }],
               mode: 'payment',
-              success_url: 'http://localhost:4000',
-              cancel_url: 'http://localhost:4000',
+              # success_url: "http://localhost:4000/success",
+              # cancel_url: "http://localhost:4000/cancel",
+              success_url: "#{ENV['DEPLOYED_URL']}/success",
+              cancel_url: "#{ENV['DEPLOYED_URL']}/cancel",
             })
             redirect_to session.url, allow_other_host: true
       end
