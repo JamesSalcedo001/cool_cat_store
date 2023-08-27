@@ -42,6 +42,7 @@ function Home() {
                 <NavLink to="/sign_up">
                     <button className="signup-home">Sign Up!</button>
                 </NavLink>
+                <h2 id="welcome">Welcome</h2>
             </>
         )
     }

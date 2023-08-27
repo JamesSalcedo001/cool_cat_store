@@ -1,6 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import { logout } from "./slices/userSlice"
 import { useNavigate, NavLink } from "react-router-dom";
+import catLogo from "./cat.png"
 
 function Header() {
     const loggedIn = useSelector(state => state.user.loggedIn)
@@ -26,12 +27,17 @@ function Header() {
         <div className="headerDiv">
             { loggedIn ? (
                 <>
+                    <img id="cat-icon" src={catLogo} alt="cat-icon"/>
                     <button onClick={logOutUser}>Log Out!</button>
                     <NavLink to="/">Profile!</NavLink>
                     <NavLink to="/products_list">Products</NavLink>
                 </>
                 ) : (
-                    <h3>welcome</h3>
+                    <>
+                        <img id="cat-icon" src={catLogo} alt="cat-icon"/>
+                        <h3>---- Cool Cat says: Please Log In!</h3>
+                    </>
+
              )}
         </div>
     )

@@ -54,6 +54,79 @@
     box-shadow: 5px 5px 30px #008bfd;
 }
 
+#attribution {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+#cat-icon {
+ height: 15vh;
+ width: auto;
+ margin-right: 1rem;
+ flex-shrink: 0;
+}
+
+.headerDiv {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: lightblue;
+    color: white;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    z-index: 1000;
+}
+
+@media (max-width: 786px) {
+    .headerDiv {
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    #cat-icon {
+        margin-right: 0;
+        margin-bottom: 0.5rem;
+    }
+
+    button {
+        margin-left: 0;
+        margin-bottom: 0.5rem;
+    }
+}
+
+button {
+background-color: darkslategray;
+color: white;
+margin-left: 1rem;
+padding: 0.5rem 1rem;
+border: none;
+border-radius: 12px;
+cursor: pointer;
+transition: background-color 0.3s ease;
+}
+
+
+button:hover {
+    background-color: rgb(36, 19, 146);
+}
+
+NavLink {
+    margin-left: 1rem;
+    text-decoration: none;
+    color: white
+}
+
+#welcome {
+    text-align: center;
+    margin-top: 10vh;
+}
+
+
+
 /* .product {
     display: flex;
     flex-direction: column;
