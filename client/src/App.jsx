@@ -5,6 +5,8 @@ import { useDispatch } from "react-redux"
 import ProductsList from './ProductsList';
 import Cancel from './Cancel';
 import Success from './Success';
+import Header from './Header';
+import Home from './Home';
 
 
 
@@ -29,7 +31,7 @@ function App() {
           <Route path="/products_list" element={<ProductsList/>} />
           <Route path="/cancel" element={<Cancel/>} />
           <Route path="/success" element={<Success/>} />
-          <Route path="/" element={<h1>hello</h1>} />
+          <Route path="/" element={<Home/>} />
         </Routes>    
     </div>
   )
