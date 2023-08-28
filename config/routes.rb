@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
   namespace :api do
     resources :cart_items
-    resources :carts
-    resources :products, only: [:index, :show]
+    resources :carts, only: [:show]
+    resources :products, only: [:index]
     resources :users, only: [:update, :destroy]
 
     post '/checkout', to: "checkout#create"
