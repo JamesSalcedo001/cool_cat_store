@@ -2,11 +2,15 @@ import './App.css'
 import { Route, Routes } from "react-router-dom";
 import { useEffect } from 'react';
 import { useDispatch } from "react-redux"
+import { login } from './slices/userSlice';
 import ProductsList from './ProductsList';
 import Cancel from './Cancel';
 import Success from './Success';
 import Header from './Header';
 import Home from './Home';
+import EditProfile from './EditProfile';
+import Signup from './Signup';
+import Login from './Login';
 
 
 
@@ -29,6 +33,9 @@ function App() {
       <Header/>
         <Routes>
           <Route path="/products_list" element={<ProductsList/>} />
+          <Route path="/edit_profile" element={<EditProfile/>} />
+          <Route path="/sign_up" element={<Signup/>} />
+          <Route path="/log_in" element={<Login/>} />
           <Route path="/cancel" element={<Cancel/>} />
           <Route path="/success" element={<Success/>} />
           <Route path="/" element={<Home/>} />

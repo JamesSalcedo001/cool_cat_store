@@ -62,6 +62,7 @@ function Login() {
 
                 <label htmlFor="password">password</label>
                 <input className="passwordInput" type="password" name="password" autoComplete="current-password" onChange={changeHandler} value={password} />
+                <button type="submit">Log In!</button>
 
             </form>
             {errors && <ul className="errors">{errors}</ul>}

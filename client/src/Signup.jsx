@@ -66,7 +66,8 @@ function Signup() {
                 <input className="passwordInput" type="password" name="password" autoComplete="current-password" onChange={changeHandler} value={password} />
 
                 <label htmlFor="avatar">avatar</label>
-                <input className="avatarInput" type="text" name="avatar" autoComplete="avatar" onChange={changeHandler} value={avatar} />
+                <input className="avatarInput" type="text" name="avatar" onChange={changeHandler} value={avatar} />
+                <button type="submit">Sign Up!</button>
             </form>
             {errors && <ul className="errors">{errors}</ul>}
         </>

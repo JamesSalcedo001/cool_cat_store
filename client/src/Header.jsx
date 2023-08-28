@@ -20,6 +20,9 @@ function Header() {
             dispatch(logout())
             navigate("/")
         })
+        .catch(error => {
+            console.error("logout failed", error)
+        })
     }
 
 

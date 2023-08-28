@@ -2,11 +2,11 @@ Rails.application.routes.draw do
   namespace :api do
     resources :cart_items
     resources :carts
-    resources :products
+    resources :products, only: [:index, :show]
     resources :users, only: [:update, :destroy]
 
     post '/checkout', to: "checkout#create"
-    get "/me", to: "users#show"
+    get "/me", to: "users#me"
     post "/signup", to: "users#create"
     post "/login", to: "sessions#create"
     delete "/logout", to: "sessions#destroy"

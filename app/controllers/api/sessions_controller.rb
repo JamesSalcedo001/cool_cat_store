@@ -15,7 +15,7 @@ module Api
     
     
         def destroy
-            sessiom.delete :user_id
+            session.delete :user_id
             head :no_content
         end
         

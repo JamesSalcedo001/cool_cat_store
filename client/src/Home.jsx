@@ -10,7 +10,7 @@ function Home() {
     const navigate = useNavigate()
 
     const handleDeleteAccount = () => {
-        fetch(`/api/users${user.id}`, {
+        fetch(`/api/users/${user.id}`, {
             method: "DELETE",
         })
         .then((res) => {
@@ -31,6 +31,7 @@ function Home() {
                 <h2>{user.username}</h2>
                 <img src={user.avatar} alt="user avatar" id="user-avatar"/>
                 <button onClick={handleDeleteAccount}>Delete Account</button>
+                <button onClick={() => navigate("/edit_profile")}>Edit Profile!</button>
             </>
         )
     } else {

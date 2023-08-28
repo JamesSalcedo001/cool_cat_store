@@ -5,7 +5,7 @@ module Api
           session = Stripe::Checkout::Session.create({
               line_items: [{
                 # Provide the exact Price ID (e.g. pr_1234) of the product you want to sell
-                price: 'price_1NiuAqIBnVrhy9EWsHBKQl3m',
+                price: 'price_1NiXnrIBnVrhy9EW9a3soJOj',
                 quantity: 1,
               }],
               mode: 'payment',

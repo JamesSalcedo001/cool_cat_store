@@ -125,6 +125,10 @@ NavLink {
     margin-top: 10vh;
 }
 
+#user-avatar {
+    height: 10vh;
+    width: auto;
+}
 
 
 /* .product {

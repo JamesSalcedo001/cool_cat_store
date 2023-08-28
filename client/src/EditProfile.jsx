@@ -20,33 +20,32 @@ function EditProfile() {
 
     const submit = (e) => {
         e.preventDefault()
-        const formDataObj = {
-            username,
-            password,
-            avatar
-        }
 
         fetch(`/api/users/${user.id}`, {
             method: "PATCH",
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify(formDataObj)
+            body: JSON.stringify(formData)
         })
         .then(res => res.json())
         .then(data => {
             if (data.errors) {
                 dispatch(setErrors(data.errors))
+                // setTimeout(() => { 
+                //     dispatch(setErrors([]))
+                // }, 2000)
             } else {
                 dispatch(updateUser(data))
                 navigate("/")
             }
         })
+        .catch(error => console.error("Error:", error))
     }
 
     const changeHandler = (e) => {
         const {name, value} = e.target
-        setFormData(formDataState => ({...formDataState, [name]: value }))
+        setFormData(formDataObj => ({...formDataObj, [name]: value }))
     }
 
 
