@@ -23,7 +23,6 @@ function App() {
     .then((data) => {
       if (data.username) {
         dispatch(login(data))
-        console.log(data)
       }
     })
   },[dispatch])

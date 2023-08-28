@@ -10,15 +10,11 @@ const productsSlice = createSlice({
     }
 })
 
-export const fetchProducts = () => async (dispatch) => {
-    try {
-        const res = await fetch("/api/products")
-        const data = await res.json()
-        dispatch(setProducts(data))
-    } catch (error) {
-        console.error("products fetch failed", error)
-    }
+export const fetchProducts = () => (dispatch) => {
+    fetch("/api/products")
+    .then(res => res.json())
+    .then(data => dispatch(setProducts(data)))
+    .catch(err => console.log(err))
 }
-
 export const { setProducts } = productsSlice.actions
 export default productsSlice.reducer
