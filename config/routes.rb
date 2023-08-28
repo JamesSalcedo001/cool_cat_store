@@ -3,7 +3,7 @@ Rails.application.routes.draw do
     resources :cart_items
     resources :carts
     resources :products
-    resources :users
+    resources :users, only: [:update, :destroy]
 
     post '/checkout', to: "checkout#create"
     get "/me", to: "users#show"

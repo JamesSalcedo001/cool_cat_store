@@ -5,5 +5,12 @@ class User < ApplicationRecord
 
     validates :password, presence: true, on: :create
 
+    after_create :new_cart
+
+    private 
+
+    def new_cart
+        self.create_cart unless self.cart
+    end
 
 end
