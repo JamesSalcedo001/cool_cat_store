@@ -9,6 +9,10 @@ const cartSlice = createSlice({
         setCartItems: (state, action) => {
             state.items = action.payload
             state.totalPrice = action.payload.reduce((sum, item) => sum + (item.product.price * item.quantity), 0)
+        },
+        clearCart: (state) => {
+            state.items = []
+            state.totalPrice = 0
         }
     }
 })
@@ -24,5 +28,5 @@ export const fetchCartItems = () => (dispatch) => {
     })
 }
 
-export const { setCartItems } = cartSlice.actions
+export const { setCartItems, clearCart } = cartSlice.actions
 export default cartSlice.reducer

@@ -5,6 +5,7 @@ Rails.application.routes.draw do
     resources :products, only: [:index]
     resources :users, only: [:update, :destroy]
 
+    delete "/clear", to: "carts#clear"
     post '/checkout', to: "checkout#create"
     get "/me", to: "users#me"
     post "/signup", to: "users#create"
