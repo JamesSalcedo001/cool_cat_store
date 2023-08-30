@@ -19,7 +19,7 @@ module Api
         end
 
         def update
-            cart_item = cart_item.find(params[:id])
+            cart_item = CartItem.find(params[:id])
             cart_item.update!(quantity: params[:quantity])
             render json: cart_item
         end
