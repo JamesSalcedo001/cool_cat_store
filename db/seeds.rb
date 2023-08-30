@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
-# Product.destroy_all
+Product.destroy_all
 
 Product.create!(title: "Sunglasses", description: "Cool Shades", stripe_id: "price_1NiXnrIBnVrhy9EW9a3soJOj", image: "https://m.media-amazon.com/images/I/51x7nqTd3vS._AC_SL1500_.jpg", price: 999)
 
