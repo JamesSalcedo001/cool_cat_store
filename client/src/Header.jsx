@@ -32,8 +32,9 @@ function Header() {
                 <>
                     <img id="cat-icon" src={catLogo} alt="cat-icon"/>
                     <button onClick={logOutUser}>Log Out!</button>
-                    <NavLink to="/">Profile!</NavLink>
+                    <NavLink to="/">Profile</NavLink>
                     <NavLink to="/products_list">Products</NavLink>
+                    <NavLink to="/cart">Cart</NavLink>
                 </>
                 ) : (
                     <>

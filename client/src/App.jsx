@@ -11,6 +11,7 @@ import Home from './Home';
 import EditProfile from './EditProfile';
 import Signup from './Signup';
 import Login from './Login';
+import Cart from './Cart';
 
 
 
@@ -31,6 +32,7 @@ function App() {
     <div className="App">
       <Header/>
         <Routes>
+        <Route path="/cart" element={<Cart/>} />
           <Route path="/products_list" element={<ProductsList/>} />
           <Route path="/edit_profile" element={<EditProfile/>} />
           <Route path="/sign_up" element={<Signup/>} />
