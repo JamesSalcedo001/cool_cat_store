@@ -6,23 +6,23 @@ const cartSlice = createSlice({
     name: "cart",
     initialState,
     reducers: {
-        setCartITems: (state, action) => {
+        setCartItems: (state, action) => {
             state.items = action.payload
             state.totalPrice = action.payload.reduce((sum, item) => sum + (item.product.price * item.quantity), 0)
         }
     }
 })
 
-export const fetchCartITems = () => (dispatch) => {
+export const fetchCartItems = () => (dispatch) => {
     fetch("/api/cart_items")
     .then(res => res.json())
     .then(data => {
-        dispatch(setCartITems(data))
+        dispatch(setCartItems(data))
     })
     .catch(err => {
         console.error("couldn't fetch cart items", err)
     })
 }
 
-export const { setCartITems } = cartSlice.actions
+export const { setCartItems } = cartSlice.actions
 export default cartSlice.reducer

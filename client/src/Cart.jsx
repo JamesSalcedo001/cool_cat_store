@@ -5,9 +5,9 @@ import { loadStripe } from "@stripe/stripe-js";
 import { useNavigate } from "react-router-dom";
 import { fetchCartItems } from "./slices/cartSlice";
 
-const stripePromise = loadStripe("pk_test_51NRQXgIBnVrhy9EWUuHcfAxJ9khW1JRTo8ujz3pMNeyK4kZLyOnpOCJhvluaNqy9VPvNS3fQa4hmRtfLDy4AQvBg00N1jw5LeM")
+const stripeKey = import.meta.env.VITE_REACT_APP_STRIPE_PUBLIC_KEY
+const stripePromise = loadStripe(stripeKey)
 
-//remember to regenerate new keys!!!!!
 
 function Cart() {
     const dispatch = useDispatch()
