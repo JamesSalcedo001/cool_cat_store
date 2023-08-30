@@ -39,7 +39,7 @@ function CartItemCard ({ item }) {
         <div className="cart-item-card">
             <img src={item.product.image} alt={item.product.title}/>
             <h4>{item.product.title}</h4>
-            <h5>Price: ${item.product.price}</h5>
+            <h5>Price: ${(item.product.price / 100).toFixed(2)}</h5>
             <label>
                 Quantity:
                 <input type="number" value={item.quantity} onChange={quantityChange}/>

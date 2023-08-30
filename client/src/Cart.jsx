@@ -17,7 +17,7 @@ function Cart() {
 
 
     useEffect(() => {
-        dispatch(fetchCartItems)
+        dispatch(fetchCartItems())
     }, [dispatch])
 
     const handleCheckout = async () => {
@@ -53,7 +53,7 @@ function Cart() {
                 <CartItemCard key={item.id} item={item}/>
             ))}
             <div className="total-price">
-                Total: ${totalPrice.toFixed(2)}
+                Total: ${(totalPrice / 100).toFixed(2)}
             </div>
             <button onClick={handleCheckout}>Check Out!</button>
         </div>
