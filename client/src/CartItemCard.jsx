@@ -1,7 +1,7 @@
 import { useDispatch } from "react-redux";
 import { fetchCartItems } from "./slices/cartSlice";
 
-function CartItemCard ({item}) {
+function CartItemCard ({ item }) {
     const dispatch = useDispatch()
 
     const quantityChange = (e) => {
@@ -20,7 +20,7 @@ function CartItemCard ({item}) {
             if (data.errors) {
                 console.log(data.errors)
             } else {
-                dispatch(fetchCartItems)
+                dispatch(fetchCartItems())
             }
         })
     }
