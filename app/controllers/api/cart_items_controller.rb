@@ -20,7 +20,7 @@ module Api
 
         def update
             cart_item = CartItem.find(params[:id])
-            new_quantity = params[:quanity]
+            new_quantity = params[:quantity]
             if new_quantity.to_i.zero?
                 cart_item.destroy
             else
