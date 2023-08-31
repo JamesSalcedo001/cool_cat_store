@@ -20,7 +20,12 @@ module Api
 
         def update
             cart_item = CartItem.find(params[:id])
-            cart_item.update!(quantity: params[:quantity])
+            new_quantity = params[:quanity]
+            if new_quantity.to_i.zero?
+                cart_item.destroy
+            else
+                cart_item.update!(quantity: new_quantity)
+            end
             render json: cart_item
         end
 

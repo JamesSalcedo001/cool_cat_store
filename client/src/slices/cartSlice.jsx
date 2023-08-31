@@ -10,6 +10,17 @@ const cartSlice = createSlice({
             state.items = action.payload
             state.totalPrice = action.payload.reduce((sum, item) => sum + (item.product.price * item.quantity), 0)
         },
+        updateCartItem: (state, action) => {
+            const newItem = action.payload
+            const currentItem = state.items.find(item => item.id === newItem.id)
+            if (currentItem) {
+                currentItem.quantity = newItem.quantity
+            }
+        },
+        removeCartItem: (state, action) => {
+            const cart_item_id = action.payload
+            state.items = state.items.filter(item => item.id !== cart_item_id)
+        },
         clearCart: (state) => {
             state.items = []
             state.totalPrice = 0
@@ -28,5 +39,5 @@ export const fetchCartItems = () => (dispatch) => {
     })
 }
 
-export const { setCartItems, clearCart } = cartSlice.actions
+export const { setCartItems, clearCart, updateCartItem, removeCartItem } = cartSlice.actions
 export default cartSlice.reducer

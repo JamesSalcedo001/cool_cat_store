@@ -1,5 +1,5 @@
 import { useDispatch } from "react-redux";
-import { fetchCartItems } from "./slices/cartSlice";
+import { fetchCartItems, removeCartItem, updateCartItem } from "./slices/cartSlice";
 
 function CartItemCard ({ item }) {
     const dispatch = useDispatch()
@@ -20,7 +20,14 @@ function CartItemCard ({ item }) {
             if (data.errors) {
                 console.log(data.errors)
             } else {
-                dispatch(fetchCartItems())
+                if (newQuantity === 0) {
+                    dispatch(removeCartItem(item.id))
+                } else {
+                    dispatch(updateCartItem({
+                        id: item.id,
+                        quantity: newQuantity
+                    }))
+                }
             }
         })
     }
