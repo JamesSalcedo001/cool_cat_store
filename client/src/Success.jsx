@@ -7,7 +7,7 @@ function Success() {
     const dispatch = useDispatch()
 
     useEffect(() => {
-        fetch("/api/carts/clear", {
+        fetch("/api/clear", {
             method: "DELETE",
         })
         .then(res => {
