@@ -16,10 +16,12 @@ const cartSlice = createSlice({
             if (currentItem) {
                 currentItem.quantity = newItem.quantity
             }
+            state.totalPrice = state.items.reduce((sum, item) => sum + (item.product.price * item.quantity), 0)
         },
         removeCartItem: (state, action) => {
             const cart_item_id = action.payload
             state.items = state.items.filter(item => item.id !== cart_item_id)
+            state.totalPrice = state.items.reduce((sum, item) => sum + (item.product.price * item.quantity), 0)
         },
         clearCart: (state) => {
             state.items = []
