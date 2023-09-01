@@ -11,8 +11,8 @@ function EditProfile() {
     const dispatch = useDispatch()
 
     const [formData, setFormData] = useState({
-        username: user.username || "",
-        avatar: user.avatar || "",
+        username: user?.username || "",
+        avatar: user?.avatar || "",
         password: ""
     })
 
@@ -32,15 +32,12 @@ function EditProfile() {
         .then(data => {
             if (data.errors) {
                 dispatch(setErrors(data.errors))
-                // setTimeout(() => { 
-                //     dispatch(setErrors([]))
-                // }, 2000)
+                setTimeout(() => { dispatch(setErrors([])) }, 2000)
             } else {
                 dispatch(updateUser(data))
                 navigate("/")
             }
         })
-        .catch(error => console.error("Error:", error))
     }
 
     const changeHandler = (e) => {

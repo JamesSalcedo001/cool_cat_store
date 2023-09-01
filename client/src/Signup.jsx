@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { useDispatch } from "react-redux";
-import { login } from "./slices/userSlice";
+import { useDispatch, useSelector } from "react-redux";
+import { login, setErrors } from "./slices/userSlice";
 import { useNavigate } from "react-router-dom";
 
 
@@ -11,7 +11,7 @@ function Signup() {
         avatar: ""
     })
 
-    const [errors, setErrors] = useState([])
+    const errors = useSelector(state => state.user.errors)
     const dispatch = useDispatch()
     const navigate = useNavigate()
     const {username, password, avatar} = formData
@@ -37,14 +37,8 @@ function Signup() {
                 dispatch(login(user))
                 navigate("/")
             } else {
-                setFormData({
-                    username: "",
-                    password: "",
-                    avatar: ""
-                })
-                const errorList = user.errors.map(e => <h2 key={e}>{e}</h2>)
-                setErrors(errorList)
-                setTimeout(() => { setErrors([])}, 2000)
+                dispatch(setErrors(user.errors))
+                setTimeout(() => { dispatch(setErrors([])) }, 2000)
             }
         })
     }
@@ -69,7 +63,7 @@ function Signup() {
                 <input className="avatarInput" type="text" name="avatar" onChange={changeHandler} value={avatar} />
                 <button type="submit">Sign Up!</button>
             </form>
-            {errors && <ul className="errors">{errors}</ul>}
+            {errors && <ul className="errors">{errors.map((e, ind) => <li key={ind}>{e}</li>)}</ul>}
         </>
     )
 }

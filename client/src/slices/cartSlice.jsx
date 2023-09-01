@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const initialState = { items: [], totalPrice: 0 }
+const initialState = { items: [], totalPrice: 0, errors: null }
 
 const cartSlice = createSlice({
     name: "cart",
@@ -23,6 +23,9 @@ const cartSlice = createSlice({
             state.items = state.items.filter(item => item.id !== cart_item_id)
             state.totalPrice = state.items.reduce((sum, item) => sum + (item.product.price * item.quantity), 0)
         },
+        setErrors: (state, action) => {
+            state.errors = action.payload
+        },
         clearCart: (state) => {
             state.items = []
             state.totalPrice = 0
@@ -37,9 +40,9 @@ export const fetchCartItems = () => (dispatch) => {
         dispatch(setCartItems(data))
     })
     .catch(err => {
-        console.error("couldn't fetch cart items", err)
+        dispatch(setErrors(err))
     })
 }
 
-export const { setCartItems, clearCart, updateCartItem, removeCartItem } = cartSlice.actions
+export const { setCartItems, clearCart, updateCartItem, removeCartItem, setErrors } = cartSlice.actions
 export default cartSlice.reducer

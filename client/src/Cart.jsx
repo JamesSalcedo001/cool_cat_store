@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import CartItemCard from "./CartItemCard";
 import { loadStripe } from "@stripe/stripe-js";
 import { useNavigate } from "react-router-dom";
-import { fetchCartItems } from "./slices/cartSlice";
+import { fetchCartItems, setErrors } from "./slices/cartSlice";
 
 const stripeKey = import.meta.env.VITE_REACT_APP_STRIPE_PUBLIC_KEY
 const stripePromise = loadStripe(stripeKey)
@@ -14,6 +14,7 @@ function Cart() {
     const navigate = useNavigate()
     const cartItems = useSelector(state => state.cart.items)
     const totalPrice = useSelector(state => state.cart.totalPrice)
+    const errors = useSelector(state => state.cart.errors)
 
 
     useEffect(() => {
@@ -31,24 +32,21 @@ function Cart() {
                 items: cartItems
             })
         })
+        const data = await res.json()
+        const stripeError = res.ok ? await stripe.redirectToCheckout({ sessionId: data.id }).error : null
 
-        if (res.ok) {
-            const data = await res.json()
-            const { error } = await stripe.redirectToCheckout({
-                sessionId: data.id
-            })
-            if (!error) {
-                navigate("/success")
-            } else {
-                console.log(error.message)
-            }
+        if (res.ok && !stripeError) {
+            navigate("/success")
         } else {
-            console.log("failed checkout")
+            const errorMess = stripeError?.message || data.error
+            dispatch(setErrors(errorMess))
+            setTimeout(() => { dispatch(setErrors([])) }, 2000)
         }
     }
 
     return (
         <div className="cart">
+            {errors && <div className="error">{errors}</div>}
             {cartItems.map(item => (
                 <CartItemCard key={item.id} item={item}/>
             ))}
