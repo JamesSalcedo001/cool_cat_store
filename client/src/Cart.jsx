@@ -1,8 +1,7 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import CartItemCard from "./CartItemCard";
 import { loadStripe } from "@stripe/stripe-js";
-import { useNavigate } from "react-router-dom";
 import { fetchCartItems, setErrors } from "./slices/cartSlice";
 
 const stripeKey = import.meta.env.VITE_REACT_APP_STRIPE_PUBLIC_KEY
@@ -10,8 +9,8 @@ const stripePromise = loadStripe(stripeKey)
 
 
 function Cart() {
+    const [isLoading, setIsLoading] = useState(false)
     const dispatch = useDispatch()
-    const navigate = useNavigate()
     const cartItems = useSelector(state => state.cart.items)
     const totalPrice = useSelector(state => state.cart.totalPrice)
     const errors = useSelector(state => state.cart.errors)
@@ -22,30 +21,37 @@ function Cart() {
     }, [dispatch])
 
     const handleCheckout = async () => {
-        const stripe = await stripePromise
-        const res = await fetch("/api/checkout", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({
-                items: cartItems
+        if (cartItems.length > 0) {
+            setIsLoading(true)
+            const stripe = await stripePromise
+            const res = await fetch("/api/checkout", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    items: cartItems
+                })
             })
-        })
-        const data = await res.json()
-        const stripeError = res.ok ? await stripe.redirectToCheckout({ sessionId: data.id }).error : null
-
-        if (res.ok && !stripeError) {
-            navigate("/success")
+            const data = await res.json()
+            const stripeMessage = res.ok ? await stripe.redirectToCheckout({ sessionId: data.id }).error : null
+    
+            if (!res.ok && stripeMessage) {   
+                const errorMess = stripeMessage?.message || data.error
+                dispatch(setErrors(errorMess))
+                setTimeout(() => { dispatch(setErrors([])) }, 2000)
+            }
+            setIsLoading(false)
         } else {
-            const errorMess = stripeError?.message || data.error
-            dispatch(setErrors(errorMess))
+            dispatch(setErrors("Please add items to cart first!"))
             setTimeout(() => { dispatch(setErrors([])) }, 2000)
         }
+     
     }
 
     return (
         <div className="cart">
+            {isLoading && <h1 className="loading">Just a moment...</h1>}
             {errors && <div className="error">{errors}</div>}
             {cartItems.map(item => (
                 <CartItemCard key={item.id} item={item}/>
