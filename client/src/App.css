@@ -146,11 +146,20 @@ button:hover {
 
 #home-login-links{
     background-color: #3B945E;
+    border-radius: 3vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
 .login-home {
     background-color: #18262b;
     color: #f2f2f2;
+    border-radius: 1vw;
+    font-weight: bolder;
+    padding: 1.5vh;
+    margin-inline: 1vw;
 }
 
 .login-home:hover {
@@ -160,6 +169,11 @@ button:hover {
 .signup-home {
     background-color: #18262b;
     color: #f2f2f2;
+    border-radius: 1vw;
+    font-weight: bolder;
+    padding: 1.5vh;
+    margin-inline: 1vw;
+
 }
 
 .signup-home:hover {
@@ -187,12 +201,27 @@ button:hover {
 
 
 .login-div { 
-    background-color: #182628;
-    padding: 3vw;
+    /* background-color: #182628; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
+    border-radius: 10px;
 }
 
 #loginForm {
-    background-color: #57BA98;
+    font-weight: bolder;
+    color: #f2f2f2;
+    text-align: center;
+    background-color: #182628;
+    border: #f2f2f2 2vh solid;
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 2em;
+    border-radius: 10px;
 }
 
 .headerDiv {
@@ -209,6 +238,11 @@ button:hover {
     flex-grow: 1;
     max-width: 5vw;
     height: 100%;
+    transition: transform 0.3s ease-out;
+}
+
+#cat-icon:hover {
+    transform: rotate(12deg);
 }
 
 #user-avatar {
@@ -243,13 +277,53 @@ button:hover {
 }
 
 .signup-div {
-    background-color: #182628;
-    padding: 3vw;
+    /* background-color: #182628; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* padding: 2em; */
+    border-radius: 10px;
 }
 
 #signup-form {
-    background-color: #57BA98;
+    text-align: center;
+    background-color: #65CCB8;
+    border: #182628 2vh solid;
+    width: 50%;
+    margin: 0 auto;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 10px;
 }
+
+
+.formInput {
+    text-align: center;
+    font-weight: bolder;
+    padding: 1vh;
+    border-radius: 3vw;
+    margin-top: 10%;
+    background-color:  #65CCB8;
+    color: #f2f2f2;
+}
+
+.formButton {
+    text-align: center;
+    font-weight: bolder;
+    padding: 1vh;
+    margin: auto;
+    margin-top: 10%;
+    width: 40%;
+    border-radius: 3vw;
+    background-color:  #3b945e;
+    color: #f2f2f2;
+}
+
+
 
 .products-list {
     background-color: pink;

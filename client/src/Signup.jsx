@@ -54,14 +54,14 @@ function Signup() {
         <div className="signup-div">
             <form id="signup-form" onSubmit={submit}>
                 <label htmlFor="username">Username</label>
-                <input className="usernameInput" type="text" name="username" autoComplete="username" onChange={changeHandler} value={username} />
+                <input className="formInput" type="text" name="username" autoComplete="username" onChange={changeHandler} value={username} />
 
                 <label htmlFor="password">password</label>
-                <input className="passwordInput" type="password" name="password" autoComplete="current-password" onChange={changeHandler} value={password} />
+                <input className="formInput" type="password" name="password" autoComplete="current-password" onChange={changeHandler} value={password} />
 
                 <label htmlFor="avatar">avatar</label>
-                <input className="avatarInput" type="text" name="avatar" onChange={changeHandler} value={avatar} />
-                <button type="submit">Sign Up!</button>
+                <input className="formInput" type="text" name="avatar" onChange={changeHandler} value={avatar} />
+                <button className="formButton" type="submit">Sign Up!</button>
             </form>
             {errors && <ul className="errors">{errors.map((e, ind) => <li key={ind}>{e}</li>)}</ul>}
         </div>

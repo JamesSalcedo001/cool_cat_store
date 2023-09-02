@@ -53,11 +53,11 @@ function Login() {
         <div className="login-div">
             <form id="loginForm" onSubmit={submit}>
                 <label htmlFor="username">Username</label>
-                <input className="usernameInput" type="text" name="username" autoComplete="username" onChange={changeHandler} value={username} />
+                <input className="formInput" type="text" name="username" autoComplete="username" onChange={changeHandler} value={username} />
 
-                <label htmlFor="password">password</label>
-                <input className="passwordInput" type="password" name="password" autoComplete="current-password" onChange={changeHandler} value={password} />
-                <button type="submit">Log In!</button>
+                <label htmlFor="password">Password</label>
+                <input className="formInput" type="password" name="password" autoComplete="current-password" onChange={changeHandler} value={password} />
+                <button className="formButton" type="submit">Log In!</button>
 
             </form>
             {errors && <ul className="errors">{errors.map((e, ind) => <li key={ind}>{e}</li>)}</ul>}

@@ -39,7 +39,6 @@ function Header() {
                 ) : (
                     <>
                         <img id="cat-icon" src={catLogo} alt="cat-icon"/>
-                        {/* <h3>---- Cool Cat says: Please Log In!</h3> */}
                     </>
 
              )}
