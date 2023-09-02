@@ -27,11 +27,11 @@ function Home() {
     if (loggedIn) {
         return (
             <div id="bio">
+                <img src={user.avatar} alt="user avatar" id="user-avatar"/>
                 <h3>Welcome!</h3>
                 <h2>{user.username}</h2>
-                <img src={user.avatar} alt="user avatar" id="user-avatar"/>
-                <button onClick={handleDeleteAccount}>Delete Account</button>
-                <button onClick={() => navigate("/edit_profile")}>Edit Profile!</button>
+                <button className="user-buttons" onClick={handleDeleteAccount}>Delete Account</button>
+                <button className="user-buttons" onClick={() => navigate("/edit_profile")}>Edit Profile!</button>
             </div>
         )
     } else {

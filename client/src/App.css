@@ -110,18 +110,6 @@ body {
     background-color: red;
 }
 
-/* button {
-    background-color: #18262b;
-    color: #f2f2f2;
-    border-radius: 3vw;
-    padding: 1vh;
-    font-weight: bolder;
-}
-
-button:hover {
-    color: #3b945e;
-} */
-
 #logout-button {
     flex-grow: 1;
     margin-inline: 1vw;
@@ -141,25 +129,49 @@ button:hover {
 }
 
 #bio {
-    background-color: crimson;
+    padding: 5vh;
+    margin-top: 20vh;
+    color: #f2f2f2;
+    text-align: center;
+    background-color: #18262b;
+    border-radius: 3vh;
+    height: 60vh;
 }
 
 #home-login-links{
+    margin-top: 20vh;
     background-color: #3B945E;
     border-radius: 3vw;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 30vh;
 }
 
-.login-home {
+.user-buttons {
     background-color: #18262b;
     color: #f2f2f2;
     border-radius: 1vw;
     font-weight: bolder;
     padding: 1.5vh;
     margin-inline: 1vw;
+}
+
+.user-buttons:hover {
+    color: #3b945e;
+}
+
+
+
+.login-home {
+    background-color: #18262b;
+    color: #f2f2f2;
+    border-radius: 2vw;
+    font-weight: bolder;
+    width: 20vw;
+    height: 5vw;
+    /* padding: 5.5vh; */
+    margin-inline: 2vw;
 }
 
 .login-home:hover {
@@ -169,10 +181,12 @@ button:hover {
 .signup-home {
     background-color: #18262b;
     color: #f2f2f2;
-    border-radius: 1vw;
+    border-radius: 2vw;
     font-weight: bolder;
-    padding: 1.5vh;
-    margin-inline: 1vw;
+    width: 20vw;
+    height: 5vw;
+    /* padding: 5.5vh; */
+    margin-inline: 2vw;
 
 }
 
@@ -201,7 +215,6 @@ button:hover {
 
 
 .login-div { 
-    /* background-color: #182628; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -246,7 +259,10 @@ button:hover {
 }
 
 #user-avatar {
-    background-color: indigo;
+    border-radius: 3vh;
+    height: 30vh;
+    width: auto;
+    margin: auto;
 }
 
 .edit-form {
@@ -277,26 +293,25 @@ button:hover {
 }
 
 .signup-div {
-    /* background-color: #182628; */
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    /* padding: 2em; */
+    padding: 2em;
     border-radius: 10px;
 }
 
 #signup-form {
+    font-weight: bolder;
+    color: #f2f2f2;
     text-align: center;
-    background-color: #65CCB8;
-    border: #182628 2vh solid;
-    width: 50%;
-    margin: 0 auto;
+    background-color: #182628;
+    border: #f2f2f2 2vh solid;
+    width: 100%;
     max-width: 400px;
     display: flex;
     flex-direction: column;
     gap: 20px;
-    padding: 20px;
+    padding: 2em;
     border-radius: 10px;
 }
 
@@ -323,7 +338,9 @@ button:hover {
     color: #f2f2f2;
 }
 
-
+#header-message {
+    color: #3b945e;
+}
 
 .products-list {
     background-color: pink;

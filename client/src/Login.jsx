@@ -53,10 +53,10 @@ function Login() {
         <div className="login-div">
             <form id="loginForm" onSubmit={submit}>
                 <label htmlFor="username">Username</label>
-                <input className="formInput" type="text" name="username" autoComplete="username" onChange={changeHandler} value={username} />
+                <input className="formInput" placeholder="username" type="text" name="username" autoComplete="username" onChange={changeHandler} value={username} />
 
                 <label htmlFor="password">Password</label>
-                <input className="formInput" type="password" name="password" autoComplete="current-password" onChange={changeHandler} value={password} />
+                <input className="formInput" placeholder="password" type="password" name="password" autoComplete="current-password" onChange={changeHandler} value={password} />
                 <button className="formButton" type="submit">Log In!</button>
 
             </form>

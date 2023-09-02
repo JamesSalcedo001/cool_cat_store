@@ -39,6 +39,7 @@ function Header() {
                 ) : (
                     <>
                         <img id="cat-icon" src={catLogo} alt="cat-icon"/>
+                        <h1 id="header-message">Hey, I'm Cool Cat! Welcome to my shop!</h1>
                     </>
 
              )}

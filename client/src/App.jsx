@@ -41,7 +41,7 @@ function App() {
           <Route path="/success" element={<Success/>} />
           <Route path="/" element={<Home/>} />
         </Routes>  
-        <a id="attribution" href="https://www.flaticon.com/free-icons/bad-luck" title="Bad luck icons">Bad luck icons created by Vlad Szirka - Flaticon</a>  
+        {/* <a id="attribution" href="https://www.flaticon.com/free-icons/bad-luck" title="Bad luck icons">Bad luck icons created by Vlad Szirka - Flaticon</a>   */}
     </div>
   )
 }
