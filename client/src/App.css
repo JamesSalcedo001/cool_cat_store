@@ -1,4 +1,4 @@
-.card {
+/* .card {
     border-radius: 2.5vw;
     padding: 2vw;
     text-align: center;
@@ -64,7 +64,7 @@
         margin-left: 0;
         margin-bottom: 0.5rem;
     } */
-}
+/* }
 
 button {
 background-color: darkslategray;
@@ -96,4 +96,170 @@ NavLink {
 #user-avatar {
     height: 10vh;
     width: auto;
+}  */
+
+
+
+
+
+body {
+    background-color: #65CCB8;
 }
+
+ .cart {
+    background-color: red;
+}
+
+/* button {
+    background-color: #18262b;
+    color: #f2f2f2;
+    border-radius: 3vw;
+    padding: 1vh;
+    font-weight: bolder;
+}
+
+button:hover {
+    color: #3b945e;
+} */
+
+#logout-button {
+    flex-grow: 1;
+    margin-inline: 1vw;
+    background-color: #18262b;
+    color: #f2f2f2;
+    border-radius: 3vw;
+    height: 100%;
+    font-weight: bolder;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2vh;
+}
+
+#logout-button:hover {
+    color: #3b945e;
+}
+
+#bio {
+    background-color: crimson;
+}
+
+#home-login-links{
+    background-color: #3B945E;
+}
+
+.login-home {
+    background-color: #18262b;
+    color: #f2f2f2;
+}
+
+.login-home:hover {
+    color: #3b945e;
+}
+
+.signup-home {
+    background-color: #18262b;
+    color: #f2f2f2;
+}
+
+.signup-home:hover {
+    color: #3b945e;
+}
+
+.nav-buttons {
+    margin-inline: 1vw;
+    padding: 2vh;
+    flex-grow: 1;
+    background-color: #18262b;
+    color: #f2f2f2;
+    border-radius: 3vw;
+    height: 100%;
+    font-weight: bolder;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.nav-buttons:hover {
+    color: #3b945e;
+}
+
+
+.login-div { 
+    background-color: #182628;
+    padding: 3vw;
+}
+
+#loginForm {
+    background-color: #57BA98;
+}
+
+.headerDiv {
+    background-color: #f2f2f2;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 3vw;
+    padding: 2vw;
+}
+
+#cat-icon {
+    flex-grow: 1;
+    max-width: 5vw;
+    height: 100%;
+}
+
+#user-avatar {
+    background-color: indigo;
+}
+
+.edit-form {
+    background-color: green;
+}
+
+.cart-item-image {
+    background-color: orange;
+    width: 15vw;
+    height: 15vh;
+}
+
+.edit-profile {
+    background-color: pink;
+    padding: 3vw;
+}
+
+.card {
+    background-color: blue;
+    height: 40vh;
+    width: 25vw;
+    border: 5px solid black;
+}
+
+#product-image {
+    width: 15vw;
+    height: 15vh;
+}
+
+.signup-div {
+    background-color: #182628;
+    padding: 3vw;
+}
+
+#signup-form {
+    background-color: #57BA98;
+}
+
+.products-list {
+    background-color: pink;
+}
+
+.cart-item-card {
+    background-color: blue;
+    height: 40vh;
+    width: 25vw;
+    border: 5px solid black;
+}
+
+

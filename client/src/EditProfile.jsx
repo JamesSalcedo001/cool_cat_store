@@ -49,7 +49,7 @@ function EditProfile() {
     return (
         <div className="edit-profile">
             <h2>Edit Profile</h2>
-            <form onSubmit={submit}>
+            <form className="edit-form" onSubmit={submit}>
                 <label htmlFor="username">Username</label>
                 <input type="text" value={username} name="username" autoComplete="username" onChange={changeHandler}/>
 

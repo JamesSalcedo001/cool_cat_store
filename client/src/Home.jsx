@@ -26,17 +26,17 @@ function Home() {
 
     if (loggedIn) {
         return (
-            <>
+            <div id="bio">
                 <h3>Welcome!</h3>
                 <h2>{user.username}</h2>
                 <img src={user.avatar} alt="user avatar" id="user-avatar"/>
                 <button onClick={handleDeleteAccount}>Delete Account</button>
                 <button onClick={() => navigate("/edit_profile")}>Edit Profile!</button>
-            </>
+            </div>
         )
     } else {
         return (
-            <>
+            <div id="home-login-links">
                 <NavLink to="/log_in">
                     <button className="login-home">Log In!</button>
                 </NavLink>
@@ -44,7 +44,7 @@ function Home() {
                     <button className="signup-home">Sign Up!</button>
                 </NavLink>
                 <h2 id="welcome">Welcome</h2>
-            </>
+            </div>
         )
     }
 }

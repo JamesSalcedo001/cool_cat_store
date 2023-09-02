@@ -51,14 +51,14 @@ function Cart() {
 
     return (
         <div className="cart">
-            {isLoading && <h1 className="loading">Just a moment...</h1>}
-            {errors && <div className="error">{errors}</div>}
+            {isLoading && <h3 className="loading">Just a moment...</h3>}
+            {errors && <h5 className="error">{errors}</h5>}
             {cartItems.map(item => (
                 <CartItemCard key={item.id} item={item}/>
             ))}
-            <div className="total-price">
+            <h5 className="total-price">
                 Total: ${(totalPrice / 100).toFixed(2)}
-            </div>
+            </h5>
             <button onClick={handleCheckout}>Check Out!</button>
         </div>
     )

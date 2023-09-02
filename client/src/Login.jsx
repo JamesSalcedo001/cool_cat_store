@@ -50,7 +50,7 @@ function Login() {
 
 
     return (
-        <>
+        <div className="login-div">
             <form id="loginForm" onSubmit={submit}>
                 <label htmlFor="username">Username</label>
                 <input className="usernameInput" type="text" name="username" autoComplete="username" onChange={changeHandler} value={username} />
@@ -61,7 +61,7 @@ function Login() {
 
             </form>
             {errors && <ul className="errors">{errors.map((e, ind) => <li key={ind}>{e}</li>)}</ul>}
-        </>
+        </div>
     )
 }
 

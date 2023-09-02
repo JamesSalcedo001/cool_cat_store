@@ -31,15 +31,15 @@ function Header() {
             { loggedIn ? (
                 <>
                     <img id="cat-icon" src={catLogo} alt="cat-icon"/>
-                    <button onClick={logOutUser}>Log Out!</button>
-                    <NavLink to="/">Profile</NavLink>
-                    <NavLink to="/products_list">Products</NavLink>
-                    <NavLink to="/cart">Cart</NavLink>
+                    <button id="logout-button" onClick={logOutUser}>Log Out!</button>
+                    <NavLink className="nav-buttons" to="/">Profile</NavLink>
+                    <NavLink className="nav-buttons" to="/products_list">Products</NavLink>
+                    <NavLink className="nav-buttons" to="/cart">Cart</NavLink>
                 </>
                 ) : (
                     <>
                         <img id="cat-icon" src={catLogo} alt="cat-icon"/>
-                        <h3>---- Cool Cat says: Please Log In!</h3>
+                        {/* <h3>---- Cool Cat says: Please Log In!</h3> */}
                     </>
 
              )}

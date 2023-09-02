@@ -51,8 +51,8 @@ function Signup() {
 
 
     return (
-        <>
-            <form id="signupForm" onSubmit={submit}>
+        <div className="signup-div">
+            <form id="signup-form" onSubmit={submit}>
                 <label htmlFor="username">Username</label>
                 <input className="usernameInput" type="text" name="username" autoComplete="username" onChange={changeHandler} value={username} />
 
@@ -64,7 +64,7 @@ function Signup() {
                 <button type="submit">Sign Up!</button>
             </form>
             {errors && <ul className="errors">{errors.map((e, ind) => <li key={ind}>{e}</li>)}</ul>}
-        </>
+        </div>
     )
 }
 
