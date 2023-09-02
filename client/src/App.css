@@ -255,7 +255,7 @@ body {
 }
 
 #cat-icon:hover {
-    transform: rotate(12deg);
+    transform: rotate(-12deg) translateY(-20px);
 }
 
 #user-avatar {
@@ -281,15 +281,26 @@ body {
 }
 
 .card {
-    background-color: blue;
+    background-color: #182628;
     height: 40vh;
     width: 25vw;
     border: 5px solid black;
+    border-radius: 2vh;
+    transition: transform 0.3s ease;
+    text-align: center;
+    color: #f2f2f2;
+    padding: 2vh;
+}
+
+.card:hover {
+    transform: scale(1.05);
 }
 
 #product-image {
     width: 15vw;
     height: 15vh;
+    margin: auto;
+    border-radius: 3vh;
 }
 
 .signup-div {
@@ -343,7 +354,11 @@ body {
 }
 
 .products-list {
-    background-color: pink;
+    background-color: #3b945e;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-content: center;
 }
 
 .cart-item-card {
