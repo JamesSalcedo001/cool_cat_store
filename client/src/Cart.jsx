@@ -56,10 +56,12 @@ function Cart() {
             {cartItems.map(item => (
                 <CartItemCard key={item.id} item={item}/>
             ))}
-            <h5 className="total-price">
-                Total: ${(totalPrice / 100).toFixed(2)}
-            </h5>
-            <button onClick={handleCheckout}>Check Out!</button>
+            <div className="footer">
+                <h1 id="total-price">
+                    Total: ${(totalPrice / 100).toFixed(2)}
+                </h1>
+                <button id="checkout" onClick={handleCheckout}>Check Out!</button>
+            </div>
         </div>
     )
 }

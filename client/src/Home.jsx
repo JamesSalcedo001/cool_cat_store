@@ -28,8 +28,8 @@ function Home() {
         return (
             <div id="bio">
                 <img src={user.avatar} alt="user avatar" id="user-avatar"/>
-                <h3>Welcome!</h3>
-                <h2>{user.username}</h2>
+                <h2 id="user-text">Welcome to your profile</h2>
+                <h2 id="username">{user.username}</h2>
                 <button className="user-buttons" onClick={handleDeleteAccount}>Delete Account</button>
                 <button className="user-buttons" onClick={() => navigate("/edit_profile")}>Edit Profile!</button>
             </div>

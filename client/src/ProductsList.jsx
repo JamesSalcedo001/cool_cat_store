@@ -11,13 +11,13 @@ function ProductsList() {
         dispatch(fetchProducts())
     },[dispatch])
 
-    return (
-        <div className="products-list">
-            {products.map((product) => (
-                <ProductCard key={product.id} product={product}/>
-            ))} 
-        </div>
-    )
+        return (
+            <div className="products-list">
+                {products.map((product) => (
+                    <ProductCard key={product.id} product={product}/>
+                ))} 
+            </div>
+        )
 }
 
 export default ProductsList;
