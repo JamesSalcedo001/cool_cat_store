@@ -18,10 +18,10 @@ module Api
           session = Stripe::Checkout::Session.create(
               line_items: items,
               mode: 'payment',
-              # success_url: "http://localhost:4000/success",
-              # cancel_url: "http://localhost:4000/cancel",
-              success_url: "#{ENV['DEPLOYED_URL']}/success",
-              cancel_url: "#{ENV['DEPLOYED_URL']}/cancel",
+              success_url: "http://localhost:4000/success",
+              cancel_url: "http://localhost:4000/cancel",
+              # success_url: "#{ENV['DEPLOYED_URL']}/success",
+              # cancel_url: "#{ENV['DEPLOYED_URL']}/cancel",
             )
          render json: { id: session.id }
       end

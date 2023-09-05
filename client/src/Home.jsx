@@ -38,10 +38,10 @@ function Home() {
         return (
             <div id="home-login-links">
                 <NavLink to="/log_in">
-                    <button className="login-home">Log In!</button>
+                    <button className="login-signup-home">Log In!</button>
                 </NavLink>
                 <NavLink to="/sign_up">
-                    <button className="signup-home">Sign Up!</button>
+                    <button className="login-signup-home">Sign Up!</button>
                 </NavLink>
             </div>
         )

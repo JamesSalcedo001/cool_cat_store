@@ -60,7 +60,7 @@ function Login() {
                 <button className="formButton" type="submit">Log In!</button>
 
             </form>
-            {errors && <ul className="errors">{errors.map((e, ind) => <li key={ind}>{e}</li>)}</ul>}
+            {errors && <ul className="error">{errors.map((e, ind) => <li key={ind}>{e}</li>)}</ul>}
         </div>
     )
 }

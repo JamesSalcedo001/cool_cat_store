@@ -63,7 +63,7 @@ function Signup() {
                 <input className="formInput" placeholder="avatar URL"  type="text" name="avatar" onChange={changeHandler} value={avatar} />
                 <button className="formButton" type="submit">Sign Up!</button>
             </form>
-            {errors && <ul className="errors">{errors.map((e, ind) => <li key={ind}>{e}</li>)}</ul>}
+            {errors && <ul className="error">{errors.map((e, ind) => <li key={ind}>{e}</li>)}</ul>}
         </div>
     )
 }
