@@ -2,6 +2,14 @@ import { useDispatch, useSelector } from "react-redux";
 import { logout } from "./slices/userSlice"
 import { useNavigate, NavLink } from "react-router-dom";
 import catLogo from "./cat.png"
+import {FiLogOut} from "react-icons/fi"
+import {FiShoppingCart} from "react-icons/fi"
+import {BiShoppingBag} from "react-icons/bi"
+import { BiHome } from "react-icons/bi";
+
+
+
+
 
 function Header() {
     const loggedIn = useSelector(state => state.user.loggedIn)
@@ -31,10 +39,10 @@ function Header() {
             { loggedIn ? (
                 <>
                     <img id="cat-icon" src={catLogo} alt="cat-icon"/>
-                    <button id="logout-button" onClick={logOutUser}>Log Out!</button>
-                    <NavLink className="nav-buttons" to="/">Profile</NavLink>
-                    <NavLink className="nav-buttons" to="/products_list">Products</NavLink>
-                    <NavLink className="nav-buttons" to="/cart">Cart</NavLink>
+                    <button className="nav-buttons" onClick={logOutUser}><FiLogOut id="logout-icon"/> Log Out!</button>
+                    <NavLink className="nav-buttons" to="/"><BiHome id="home-icon"/>Profile</NavLink>
+                    <NavLink className="nav-buttons" to="/products_list"><BiShoppingBag id="product-icon"/> Products</NavLink>
+                    <NavLink className="nav-buttons" to="/cart"><FiShoppingCart id="cart-icon"/> Cart</NavLink>
                 </>
                 ) : (
                     <>

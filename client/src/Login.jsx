@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { login, setErrors } from "./slices/userSlice";
 import { useNavigate } from "react-router-dom";
+import {FiLock} from "react-icons/fi"
 
 
 function Login() {
@@ -57,7 +58,7 @@ function Login() {
 
                 <label htmlFor="password">Password</label>
                 <input className="formInput" placeholder="password" type="password" name="password" autoComplete="current-password" onChange={changeHandler} value={password} />
-                <button className="formButton" type="submit">Log In!</button>
+                <button className="formButton" type="submit"><FiLock className="login-signup-lock"/> Log In!</button>
 
             </form>
             {errors && <ul className="error">{errors.map((e, ind) => <li key={ind}>{e}</li>)}</ul>}

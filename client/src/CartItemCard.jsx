@@ -1,5 +1,6 @@
 import { useDispatch } from "react-redux";
 import { fetchCartItems, removeCartItem, updateCartItem } from "./slices/cartSlice";
+import { FiDelete } from "react-icons/fi";
 
 function CartItemCard ({ item }) {
     const dispatch = useDispatch()
@@ -45,13 +46,13 @@ function CartItemCard ({ item }) {
     return (
         <div className="cart-item-card">
             <img className="cart-item-image" src={item.product.image} alt={item.product.title}/>
-            <h4 className="cart-item-title">{item.product.title}</h4>
-            <h5 className="cart-item-price">Price: ${(item.product.price / 100).toFixed(2)}</h5>
-            <label>
+            <h2 className="cart-item-title">{item.product.title}</h2>
+            <h3 className="cart-item-price">Price: ${(item.product.price / 100).toFixed(2)}</h3>
+            <label id="cart-quantity">
                 Quantity:
                 <input id="cart-item-input" type="number" value={item.quantity} onChange={quantityChange}/>
             </label>
-            <button id="cart-item-button" onClick={removeClick}>Remove from Cart</button>
+            <button id="cart-item-button" onClick={removeClick}>Remove <FiDelete id="delete-icon-cart"/></button>
         </div>
     )
 }

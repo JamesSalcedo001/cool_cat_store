@@ -30,3 +30,14 @@ module Api
         # end
     end
 end
+
+
+module Api
+    class ProductsController < ApplicationController
+
+   
+        def index
+            render json: Product.all
+        end
+    end
+end

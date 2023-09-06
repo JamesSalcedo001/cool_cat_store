@@ -1,13 +1,15 @@
 import { NavLink } from "react-router-dom";
+import { BiHome } from "react-icons/bi";
+
 
 function Cancel() {
     return (
-        <>
+        <div className="cancel">
             <h1>Canceled Checkout!</h1>
             <NavLink to="/">
-                <button>Back to Home!</button>
+                <button className="navigate-back"><BiHome/></button>
             </NavLink>
-        </>
+        </div>
     )
 }
 

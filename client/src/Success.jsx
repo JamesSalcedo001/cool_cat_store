@@ -21,12 +21,12 @@ function Success() {
     },[dispatch])
 
     return (
-        <>
+        <div className="success">
             <h1>Success! Thanks for Shopping!</h1>
             <NavLink to="/">
-                <button>Back to Home!</button>
+                <button className="navigate-back">Back to Home!</button>
             </NavLink>
-        </>
+        </div>
     )
 }
 

@@ -2,6 +2,8 @@ import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { login, setErrors } from "./slices/userSlice";
 import { useNavigate } from "react-router-dom";
+import {FiLock} from "react-icons/fi"
+
 
 
 function Signup() {
@@ -61,7 +63,7 @@ function Signup() {
 
                 <label htmlFor="avatar">Avatar</label>
                 <input className="formInput" placeholder="avatar URL"  type="text" name="avatar" onChange={changeHandler} value={avatar} />
-                <button className="formButton" type="submit">Sign Up!</button>
+                <button className="formButton" type="submit"><FiLock className="login-signup-lock"/> Sign Up!</button>
             </form>
             {errors && <ul className="error">{errors.map((e, ind) => <li key={ind}>{e}</li>)}</ul>}
         </div>

@@ -2,18 +2,18 @@ import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import CartItemCard from "./CartItemCard";
 import { loadStripe } from "@stripe/stripe-js";
-import { fetchCartItems, setErrors } from "./slices/cartSlice";
+import { fetchCartItems, setErrors, setIsLoading } from "./slices/cartSlice";
 
 const stripeKey = import.meta.env.VITE_REACT_APP_STRIPE_PUBLIC_KEY
 const stripePromise = loadStripe(stripeKey)
 
 
 function Cart() {
-    const [isLoading, setIsLoading] = useState(false)
     const dispatch = useDispatch()
     const cartItems = useSelector(state => state.cart.items)
     const totalPrice = useSelector(state => state.cart.totalPrice)
     const errors = useSelector(state => state.cart.errors)
+    const isLoading = useSelector(state => state.cart.isLoading)
 
 
     useEffect(() => {
@@ -22,7 +22,7 @@ function Cart() {
 
     const handleCheckout = async () => {
         if (cartItems.length > 0) {
-            setIsLoading(true)
+            dispatch(setIsLoading(true))
             const stripe = await stripePromise
             const res = await fetch("/api/checkout", {
                 method: "POST",
@@ -41,7 +41,7 @@ function Cart() {
                 dispatch(setErrors(errorMess))
                 setTimeout(() => { dispatch(setErrors([])) }, 2000)
             }
-            setIsLoading(false)
+            dispatch(setIsLoading(false))
         } else {
             dispatch(setErrors("Please add items to cart first!"))
             setTimeout(() => { dispatch(setErrors([])) }, 2000)
@@ -49,21 +49,30 @@ function Cart() {
      
     }
 
-    return (
-        <div className="cart">
-            {isLoading && <h3 className="loading">Just a moment...</h3>}
-            {errors && <h5 className="error">{errors}</h5>}
-            {cartItems.map(item => (
-                <CartItemCard key={item.id} item={item}/>
-            ))}
-            <div className="footer">
-                <h1 id="total-price">
-                    Total: ${(totalPrice / 100).toFixed(2)}
-                </h1>
-                <button id="checkout" onClick={handleCheckout}>Check Out!</button>
+    if(isLoading) {
+        return (
+            <div className='loadingSection'>
+                <div className="loading"></div>
+                <h3 className="load">Just a moment...</h3>
             </div>
-        </div>
-    )
+        )
+    } else {
+        return (
+            <div className="cart">
+                {cartItems.map(item => (
+                    <CartItemCard key={item.id} item={item}/>
+                ))}
+                <div className="footer">
+                    <h1 id="total-price">
+                        Total: ${(totalPrice / 100).toFixed(2)}
+                    </h1>
+                    <button id="checkout" onClick={handleCheckout}>Check Out!</button>
+                </div>
+                {errors && <h5 className="error">{errors}</h5>}
+            </div>
+        )
+    }
+
 }
 
 export default Cart;

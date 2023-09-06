@@ -1,5 +1,6 @@
 import { useDispatch } from "react-redux";
 import { fetchCartItems } from "./slices/cartSlice";
+import {BiCartAdd} from "react-icons/bi"
 
 
 function ProductCard({ product }) {
@@ -34,7 +35,7 @@ function ProductCard({ product }) {
                     <h3 className="card-title">{product.title}</h3>
                     <p className="card-price">${(product.price / 100 ).toFixed(2)}</p>
                     <p className="card-description">{product.description}</p>
-                    <button className="card-button" onClick={addToCart}>Add to Cart!</button>
+                    <button className="card-button" onClick={addToCart}><BiCartAdd id="add-to-cart"/> Add to Cart!</button>
                 </div>
         </div>
     )

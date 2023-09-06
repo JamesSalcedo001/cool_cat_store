@@ -48,17 +48,17 @@ function EditProfile() {
 
     return (
         <div className="edit-profile">
-            <h2>Edit Profile</h2>
             <form className="edit-form" onSubmit={submit}>
+            <h2 id="title-edit">Edit Profile</h2>
                 <label htmlFor="username">Username</label>
-                <input type="text" value={username} name="username" autoComplete="username" onChange={changeHandler}/>
+                <input type="text" className="formInput" value={username} name="username" autoComplete="username" onChange={changeHandler}/>
 
                 <label htmlFor="password">Password</label>
-                <input type="password" value={password} name="password" autoComplete="current-password" onChange={changeHandler}/>
+                <input type="password" className="formInput" value={password} name="password" autoComplete="current-password" onChange={changeHandler}/>
 
                 <label htmlFor="avatar">Avatar</label>
-                <input type="text" value={avatar} name="avatar" onChange={changeHandler}/>
-                <button type="submit">Update Profile!</button>
+                <input type="text" className="formInput" value={avatar} name="avatar" onChange={changeHandler}/>
+                <button className="formButton" type="submit">Update Profile!</button>
             </form>
             {errors && errors.map((e, ind) => <h5 key={ind} className="error">{e}</h5>)}
         </div>

@@ -1,6 +1,11 @@
 import { useSelector, useDispatch } from "react-redux";
 import { NavLink, useNavigate } from "react-router-dom";
 import { deleteUser } from "./slices/userSlice";
+import { FiLogIn } from "react-icons/fi";
+import { BiTrash } from "react-icons/bi";
+import { BiEdit } from "react-icons/bi";
+
+
 
 
 function Home() {
@@ -26,22 +31,24 @@ function Home() {
 
     if (loggedIn) {
         return (
+            <div id="home-bio">
             <div id="bio">
                 <img src={user.avatar} alt="user avatar" id="user-avatar"/>
                 <h2 id="user-text">Welcome to your profile</h2>
                 <h2 id="username">{user.username}</h2>
-                <button className="user-buttons" onClick={handleDeleteAccount}>Delete Account</button>
-                <button className="user-buttons" onClick={() => navigate("/edit_profile")}>Edit Profile!</button>
+                <button className="user-buttons" onClick={handleDeleteAccount}>Delete<BiTrash id="delete-icon-user"/></button>
+                <button className="user-buttons" onClick={() => navigate("/edit_profile")}> Edit <BiEdit id="edit-icon-user"/> </button>
+            </div>
             </div>
         )
     } else {
         return (
             <div id="home-login-links">
                 <NavLink to="/log_in">
-                    <button className="login-signup-home">Log In!</button>
+                    <button className="login-signup-home"><FiLogIn/> Log In!</button>
                 </NavLink>
                 <NavLink to="/sign_up">
-                    <button className="login-signup-home">Sign Up!</button>
+                    <button className="login-signup-home"><FiLogIn/> Sign Up!</button>
                 </NavLink>
             </div>
         )
