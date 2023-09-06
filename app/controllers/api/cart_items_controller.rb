@@ -1,5 +1,6 @@
 module Api
     class CartItemsController < ApplicationController
+        before_action :find_cart_item, only: [:update, :destroy]
 
         def index
             cart_items = @current_user.cart.cart_items.includes(:product)
@@ -19,20 +20,28 @@ module Api
         end
 
         def update
-            cart_item = CartItem.find(params[:id])
             new_quantity = params[:quantity]
             if new_quantity.to_i.zero?
-                cart_item.destroy
+                @found_cart_item.destroy
             else
-                cart_item.update!(quantity: new_quantity)
+                @found_cart_item.update!(quantity: new_quantity)
             end
-            render json: cart_item
+            render json: @found_cart_item
         end
 
         def destroy
-            cart_item = CartItem.find(params[:id])
-            cart_item.destroy
+            @found_cart_item.destroy
             head :no_content
+        end
+
+
+
+        private
+
+        def find_cart_item
+            # @found_cart_item = CartItem.find(params[:id])
+            @found_cart_item = @current_user.cart.cart_items.find(params[:id])
+            render json: {error: "Cart item not found"}, status: :not_found unless @found_cart_item
         end
 
     end
