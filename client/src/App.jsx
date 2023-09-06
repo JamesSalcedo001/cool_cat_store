@@ -2,7 +2,7 @@ import './App.css'
 import { Route, Routes } from "react-router-dom";
 import { useEffect } from 'react';
 import { useDispatch } from "react-redux"
-import { login } from './slices/userSlice';
+import { login, setIsLoading } from './slices/userSlice';
 import ProductsList from './ProductsList';
 import Cancel from './Cancel';
 import Success from './Success';
@@ -18,12 +18,18 @@ import Cart from './Cart';
 function App() {
   const dispatch = useDispatch()
 
+
   useEffect(() => {
+    dispatch(setIsLoading(true))
     fetch("/api/me")
     .then((res) => res.json())
     .then((data) => {
       if (data.username) {
         dispatch(login(data))
+        dispatch(setIsLoading(false))
+      } else {
+        console.log(data.errors)
+        dispatch(setIsLoading(false))
       }
     })
   },[dispatch])

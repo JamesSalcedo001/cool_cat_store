@@ -11,23 +11,28 @@ import { BiEdit } from "react-icons/bi";
 function Home() {
     const user = useSelector(state => state.user.user)
     const loggedIn = useSelector(state => state.user.loggedIn)
+    const isLoading = useSelector(state => state.user.isLoading)
     const dispatch = useDispatch()
     const navigate = useNavigate()
 
-    const handleDeleteAccount = () => {
-        fetch(`/api/users/${user.id}`, {
-            method: "DELETE",
-        })
-        .then((res) => {
-            if(res.ok) {
-                dispatch(deleteUser())
-                navigate("/")
-            } else {
-                console.log("Failed to delete")
-            }
-        })
+    const handleDeleteAccount = async () => {
+        const res = await fetch(`/api/users/${user.id}`, { method: "DELETE" })
+        if (res.ok) {
+            dispatch(deleteUser())
+            navigate("/")
+        } else {
+            console.log("Failed to delete")
+        }
     }
 
+    if (isLoading) {
+        return (
+            <div className='loadingSection'>
+                <div className="loading"></div>
+                <h3 className="load">Just a moment...</h3>
+            </div>
+        )
+    }
 
     if (loggedIn) {
         return (
