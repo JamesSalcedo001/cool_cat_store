@@ -1,5 +1,5 @@
-# Cool Cat Store
-<img src="https://github.com/JamesSalcedo001/cool_cat_store/assets/107723341/99d5deab-279c-4cf7-a77c-9d4c338622ed" width="300" height="300" />
+# Cool Cat Store  <img src="https://github.com/JamesSalcedo001/cool_cat_store/assets/107723341/99d5deab-279c-4cf7-a77c-9d4c338622ed" width="100" height="100" />
+
 
 ![image](https://img.shields.io/badge/Ruby_on_Rails-CC0000?style=for-the-badge&logo=ruby-on-rails&logoColor=white)
 ![image](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
