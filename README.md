@@ -1,4 +1,7 @@
-# Cool Cat Store  <img src="https://github.com/JamesSalcedo001/cool_cat_store/assets/107723341/99d5deab-279c-4cf7-a77c-9d4c338622ed" width="100" height="100" />
+<img src="https://github.com/JamesSalcedo001/cool_cat_store/assets/107723341/99d5deab-279c-4cf7-a77c-9d4c338622ed" width="200" height="200" />
+
+
+# Cool Cat Store 
 
 
 ![image](https://img.shields.io/badge/Ruby_on_Rails-CC0000?style=for-the-badge&logo=ruby-on-rails&logoColor=white)
@@ -47,6 +50,22 @@ In the Stripe dashboard, one can create products, and once these are created, th
 ## Usage
 
 When the application starts up in your browser, you start at the login/signup page. You can sign up if you are a new user with an avatar URL, a username, and a password. A username and password are required, but the avatar is optional. After you log in, you are navigated to the user profile landing page. At the top there is a header, where you can navigate around the site. There is a Products route, a Cart route, and a User Profile route, and you can log out from the site when you are finished.
+
+
+![Screen Shot 2023-09-07 at 4 09 59 PM](https://github.com/JamesSalcedo001/cool_cat_store/assets/107723341/b4453e47-3fc2-4f4b-91fd-f73bd898154c)
+
+![Screen Shot 2023-09-07 at 4 10 26 PM](https://github.com/JamesSalcedo001/cool_cat_store/assets/107723341/b14f62e3-9e5f-45a4-876f-6d4a879eee89)
+
+![Screen Shot 2023-09-07 at 4 11 11 PM](https://github.com/JamesSalcedo001/cool_cat_store/assets/107723341/5d1eec20-dd0c-40b2-adee-bd107302c1ea)
+
+![Screen Shot 2023-09-07 at 4 11 33 PM](https://github.com/JamesSalcedo001/cool_cat_store/assets/107723341/b71695ca-24e3-4c0c-a6f3-087435135852)
+
+![Screen Shot 2023-09-07 at 4 12 04 PM](https://github.com/JamesSalcedo001/cool_cat_store/assets/107723341/e3c59c90-15ce-4196-8e83-e96fd19a4b1a)
+
+![Screen Shot 2023-09-07 at 4 12 30 PM](https://github.com/JamesSalcedo001/cool_cat_store/assets/107723341/188a06c1-750a-4e99-af15-0e5115f11f84)
+
+![Screen Shot 2023-09-07 at 4 13 41 PM](https://github.com/JamesSalcedo001/cool_cat_store/assets/107723341/423a9de2-752b-4164-a85f-02e2ce2ac222)
+
 
 
 
