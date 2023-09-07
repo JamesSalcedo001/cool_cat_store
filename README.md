@@ -1,4 +1,4 @@
-# Cool Cat Store
+# Cool Cat Store ![image]({https://img.shields.io/badge/Render-46E3B7?style=for-the-badge&logo=render&logoColor=white})
 
 Welcome to Cool Cat's online shop! You shop here and you're GUARANTEED to be a cool cat too!
 
@@ -107,7 +107,7 @@ Routing:
 
 ## Credit
 
-The product images are not owned by me, these are from Google Images and for demonstration purposes only. The Cool Cat icon is from a site called Flaticon, made by an artist named Vlad Szirka. [Flation](https://www.flaticon.com/free-icons/bad-luck)
+The product images are not owned by me, these are from Google Images and for demonstration purposes only. The Cool Cat icon is from a site called Flaticon, made by an artist named Vlad Szirka. [Flaticon](https://www.flaticon.com/free-icons/bad-luck)
 
 ## Contributing
 
