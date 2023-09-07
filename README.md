@@ -1,4 +1,16 @@
-# Cool Cat Store ![image]({https://img.shields.io/badge/Render-46E3B7?style=for-the-badge&logo=render&logoColor=white})
+# Cool Cat Store
+![cat (1)](https://github.com/JamesSalcedo001/cool_cat_store/assets/107723341/99d5deab-279c-4cf7-a77c-9d4c338622ed)
+
+![image](https://img.shields.io/badge/Ruby_on_Rails-CC0000?style=for-the-badge&logo=ruby-on-rails&logoColor=white)
+![image](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![image](https://img.shields.io/badge/Ruby-CC342D?style=for-the-badge&logo=ruby&logoColor=white)
+![image](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
+![image](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)
+![image](https://img.shields.io/badge/Stripe-626CD9?style=for-the-badge&logo=Stripe&logoColor=white)
+![image](https://img.shields.io/badge/Redux-593D88?style=for-the-badge&logo=redux&logoColor=white)
+![image](https://img.shields.io/badge/Vite-B73BFE?style=for-the-badge&logo=vite&logoColor=FFD62E)
+![image](https://img.shields.io/badge/Render-46E3B7?style=for-the-badge&logo=render&logoColor=white)
+
 
 Welcome to Cool Cat's online shop! You shop here and you're GUARANTEED to be a cool cat too!
 
