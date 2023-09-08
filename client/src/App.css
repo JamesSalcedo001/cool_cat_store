@@ -14,7 +14,7 @@ body {
     min-height: 90vh;
     width: 100%;
     max-width: 600px;
-    margin: 30vh auto;
+    margin: 5vh auto;
     border-radius: 2vh;
     color: #f2f2f2;
 } 
@@ -168,7 +168,7 @@ body {
 }
 
 .cart-item-image {
-    width: 23vw;
+    width: 18vw;
     height: 23vh;
     border-radius: 2vh;
     margin-right: 3vw;
@@ -211,7 +211,7 @@ body {
 }
 
 #product-image {
-    width: 23vw;
+    width: 18vw;
     height: 23vh;
     border-radius: 2vh;
     margin-right: 3vw;
@@ -525,12 +525,12 @@ border: #f2f2f2 solid 1px;
 
 .loading {
     display: inline-block;
-    border: 1vw solid #f2f2f214;
+    border: 1vw solid #f2f2f224;
     border-left-color:#0255ad;
     border-radius: 50%;
     width: 30px;
     height: 30px;
-    animation: donut-spin 0.2s linear infinite;
+    animation: donut-spin 0.5s linear infinite;
 }
 
 .load {
@@ -623,4 +623,9 @@ border: #f2f2f2 solid 1px;
 
 .login-signup-lock {
     margin-right: 0.5rem;
+}
+
+#attribution {
+    position: relative;
+    top: 50vh;
 }

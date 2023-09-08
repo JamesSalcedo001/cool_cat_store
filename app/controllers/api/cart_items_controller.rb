@@ -39,7 +39,6 @@ module Api
         private
 
         def find_cart_item
-            # @found_cart_item = CartItem.find(params[:id])
             @found_cart_item = @current_user.cart.cart_items.find(params[:id])
             render json: {error: "Cart item not found"}, status: :not_found unless @found_cart_item
         end

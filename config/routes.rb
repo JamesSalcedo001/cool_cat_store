@@ -11,8 +11,7 @@ Rails.application.routes.draw do
     post "/signup", to: "users#create"
     post "/login", to: "sessions#create"
     delete "/logout", to: "sessions#destroy"
-    # post "/create_stripe_product", to: "products#create_stripe_product"
-    # post "/create_stripe_price", to: "products#create_stripe_price"
+  
   end
 
   get '*path',

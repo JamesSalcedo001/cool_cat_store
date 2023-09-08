@@ -16,23 +16,25 @@ function Header() {
     const dispatch = useDispatch()
     const navigate = useNavigate()
 
-
-    const logOutUser = () => {
-        fetch("/api/logout", {
-            method: "DELETE",
-            headers: {
-                "Content-Type": "application/json"
+    const logOutUser = async () => {
+        try {
+            const res = await fetch("/api/logout", {
+                method: "DELETE",
+                headers: {
+                    "Content-Type": "application/json"
+                }
+            })
+            if (res.ok) {
+                dispatch(logout())
+                navigate("/")
+            } else {
+                console.log(res)
             }
-        })
-        .then(() => {
-            dispatch(logout())
-            navigate("/")
-        })
-        .catch(error => {
+        } catch (error) {
             console.error("logout failed", error)
-        })
+        }
+      
     }
-
 
     return (
         <div className="headerDiv">
