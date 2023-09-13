@@ -49,6 +49,10 @@ In the Stripe dashboard, one can create products, and once these are created, th
 
 ## Usage
 
+Here is a video recording of myself demonstrating the functionality of my app: [Cool Cat Video](https://youtu.be/RcYWU72wMy0)
+
+Additionally, here is the deployed app I am hosting on Render: [Cool Cat Site](https://cool-cat-store.onrender.com)
+
 When the application starts up in your browser, you start at the login/signup page. You can sign up if you are a new user with an avatar URL, a username, and a password. A username and password are required, but the avatar is optional. After you log in, you are navigated to the user profile landing page. At the top there is a header, where you can navigate around the site. There is a Products route, a Cart route, and a User Profile route, and you can log out from the site when you are finished.
 
 
