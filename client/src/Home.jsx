@@ -1,4 +1,5 @@
 import { useSelector, useDispatch } from "react-redux";
+import { useCallback } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import { deleteUser } from "./slices/userSlice";
 import { FiLogIn } from "react-icons/fi";
@@ -9,11 +10,19 @@ import { BiEdit } from "react-icons/bi";
 
 
 function Home() {
-    const user = useSelector(state => state.user.user)
-    const loggedIn = useSelector(state => state.user.loggedIn)
-    const isLoading = useSelector(state => state.user.isLoading)
+    const { user, loggedIn, isLoading } = useSelector(state => ({
+        user: state.user.user,
+        loggedIn: state.user.loggedIn,
+        isLoading: state.user.isLoading,
+    }))
+
     const dispatch = useDispatch()
     const navigate = useNavigate()
+
+    const handleEditProfile = useCallback(() => {
+        navigate("/edit_profile")
+    },[navigate])
+
 
     const handleDeleteAccount = async () => {
         const res = await fetch(`/api/users/${user.id}`, { method: "DELETE" })
@@ -42,7 +51,7 @@ function Home() {
                 <h2 id="user-text">Welcome to your profile</h2>
                 <h2 id="username">{user.username}</h2>
                 <button className="user-buttons" onClick={handleDeleteAccount}>Delete<BiTrash id="delete-icon-user"/></button>
-                <button className="user-buttons" onClick={() => navigate("/edit_profile")}> Edit <BiEdit id="edit-icon-user"/> </button>
+                <button className="user-buttons" onClick={handleEditProfile}> Edit <BiEdit id="edit-icon-user"/> </button>
             </div>
             </div>
         )
