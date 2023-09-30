@@ -1,32 +1,17 @@
+import React, { memo, useCallback } from "react"
 import { useDispatch } from "react-redux";
-import { fetchCartItems } from "./slices/cartSlice";
+import { addItemToCart } from "./slices/cartSlice";
 import {BiCartAdd} from "react-icons/bi"
 
 
 function ProductCard({ product }) {
     const dispatch = useDispatch()
 
-    const addToCart = () => {
-        fetch("/api/cart_items", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({
-                product_id: product.id,
-                quantity: 1
-            })
-        })
-        .then(res => res.json())
-        .then(data => {
-            if (data.errors) {
-                console.log(data.errors)
-            } else {
-                dispatch(fetchCartItems())
-            }
-        })
-        .catch(error => console.log(error))
-    }
+    const addToCart = useCallback(() => {
+        dispatch(addItemToCart({ productId: product.id, quantity: 1 }))
+    },[dispatch, product.id])
+
+  
 
     return (
         <div className="card">
@@ -41,7 +26,7 @@ function ProductCard({ product }) {
     )
 }
 
-export default ProductCard;
+export default memo(ProductCard);
 
 
 

@@ -10,11 +10,9 @@ import { BiEdit } from "react-icons/bi";
 
 
 function Home() {
-    const { user, loggedIn, isLoading } = useSelector(state => ({
-        user: state.user.user,
-        loggedIn: state.user.loggedIn,
-        isLoading: state.user.isLoading,
-    }))
+    const user = useSelector(state => state.user.user)
+    const loggedIn = useSelector(state => state.user.loggedIn)
+    const isLoading = useSelector(state => state.user.isLoading)
 
     const dispatch = useDispatch()
     const navigate = useNavigate()

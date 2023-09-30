@@ -22,18 +22,18 @@ const productsSlice = createSlice({
     }
 })
 
-export const fetchProducts = () => (dispatch) => {
+export const fetchProducts = () => async (dispatch) => {
     dispatch(setIsLoading(true))
-    fetch("/api/products")
-    .then(res => res.json())
-    .then(data => {
+    try {
+        const res = await fetch("/api/products")
+        const data = await res.json()
         dispatch(setProducts(data))
+    } catch (error) {
+        dispatch(setErrors(error.toString()))
+    } finally {
         dispatch(setIsLoading(false))
-    })
-    .catch(err => {
-        dispatch(setErrors(err))
-        dispatch(setIsLoading(false))
-    })
+    }
 }
+
 export const { setProducts, setErrors, setIsLoading } = productsSlice.actions
 export default productsSlice.reducer

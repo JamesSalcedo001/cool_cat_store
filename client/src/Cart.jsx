@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import CartItemCard from "./CartItemCard";
 import { loadStripe } from "@stripe/stripe-js";

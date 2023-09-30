@@ -1,17 +1,19 @@
 import './App.css'
 import { Route, Routes } from "react-router-dom";
-import { useEffect } from 'react';
+import { useEffect, lazy, Suspense } from 'react';
 import { useDispatch } from "react-redux"
 import { login, setIsLoading } from './slices/userSlice';
-import ProductsList from './ProductsList';
-import Cancel from './Cancel';
-import Success from './Success';
-import Header from './Header';
-import Home from './Home';
-import EditProfile from './EditProfile';
-import Signup from './Signup';
-import Login from './Login';
-import Cart from './Cart';
+
+
+const ProductsList = lazy(() => import('./ProductsList'));
+const Cancel = lazy(() => import('./Cancel'));
+const Success = lazy(() => import('./Success'));
+const Header = lazy(() => import( './Header'));
+const Home = lazy(() => import('./Home'));
+const EditProfile = lazy(() => import('./EditProfile'));
+const Signup = lazy(() => import('./Signup'));
+const Login = lazy(() => import('./Login'));
+const Cart = lazy(() => import('./Cart'));
 
 
 
@@ -36,6 +38,11 @@ function App() {
   
   return (
     <div className="App">
+      <Suspense 
+      fallback={<div className='loadingSection'>
+                  <div className="loading"></div>
+                  <h3 className="load">Just a moment...</h3>
+                </div>}>
       <Header/>
         <Routes>
         <Route path="/cart" element={<Cart/>} />
@@ -47,6 +54,7 @@ function App() {
           <Route path="/success" element={<Success/>} />
           <Route path="/" element={<Home/>} />
         </Routes>  
+        </Suspense>
         <a id="attribution" href="https://www.flaticon.com/free-icons/bad-luck" title="Bad luck icons">Bad luck icons created by Vlad Szirka - Flaticon</a>  
     </div>
   )

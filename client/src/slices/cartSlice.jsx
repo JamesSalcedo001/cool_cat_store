@@ -1,6 +1,25 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
 const initialState = { items: [], totalPrice: 0, errors: null, isLoading: false }
+
+export const addItemToCart = createAsyncThunk(
+    "cart/addItem",
+    async ({ productId, quantity}) => {
+        const res = await fetch("/api/cart_items", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body:JSON.stringify({
+                product_id: productId,
+                quantity,
+            }),
+        })
+        const data = await res.json()
+        if (data.errors) throw new Error(data.errors)
+        return data;
+    }
+)
 
 const cartSlice = createSlice({
     name: "cart",

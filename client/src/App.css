@@ -525,12 +525,12 @@ border: #f2f2f2 solid 1px;
 
 .loading {
     display: inline-block;
-    border: 1vw solid #f2f2f224;
+    border: 1rem solid #f2f2f224;
     border-left-color:#0255ad;
     border-radius: 50%;
     width: 30px;
     height: 30px;
-    animation: donut-spin 0.5s linear infinite;
+    animation: donut-spin 0.4s linear infinite;
 }
 
 .load {
