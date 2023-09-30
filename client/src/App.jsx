@@ -2,7 +2,8 @@ import './App.css'
 import { Route, Routes } from "react-router-dom";
 import { useEffect, lazy, Suspense } from 'react';
 import { useDispatch } from "react-redux"
-import { login, setIsLoading } from './slices/userSlice';
+import { login } from './slices/userSlice';
+import { setIsLoading } from "./slices/loadingSlice"
 
 
 const ProductsList = lazy(() => import('./ProductsList'));
