@@ -1,11 +1,13 @@
-import ProductCard from "./ProductCard";
-import { useEffect, useMemo } from "react";
+import React, { useEffect, useMemo, Suspense } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { fetchProducts } from "./slices/productsSlice";
 
+const ProductCard = React.lazy(() => import("./ProductCard"));
+import Loading from "./Loading";
+
 function ProductsList() {
     const products = useSelector(state => state.products.products)
-    const isLoading = useSelector(state => state.products.isLoading)
+    const isLoading = useSelector(state => state.loading.isLoading)
 
 
     const dispatch = useDispatch()
@@ -22,16 +24,13 @@ function ProductsList() {
     ), [products])
 
     if (isLoading) {
-        return (
-            <div className='loadingSection'>
-                <div className="loading"></div>
-                <h3 className="load">Just a moment...</h3>
-            </div>
-        )
+        return <Loading />
     } else {
         return (
             <div className="products-list">
-                {productCards} 
+                <Suspense fallback={<Loading />}>
+                    {productCards} 
+                </Suspense>
             </div>
         )
     }

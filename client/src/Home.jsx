@@ -5,6 +5,7 @@ import { deleteUser } from "./slices/userSlice";
 import { FiLogIn } from "react-icons/fi";
 import { BiTrash } from "react-icons/bi";
 import { BiEdit } from "react-icons/bi";
+import Loading from "./Loading";
 
 
 
@@ -12,7 +13,7 @@ import { BiEdit } from "react-icons/bi";
 function Home() {
     const user = useSelector(state => state.user.user)
     const loggedIn = useSelector(state => state.user.loggedIn)
-    const isLoading = useSelector(state => state.user.isLoading)
+    const isLoading = useSelector(state => state.loading.isLoading)
 
     const dispatch = useDispatch()
     const navigate = useNavigate()
@@ -33,12 +34,7 @@ function Home() {
     }
 
     if (isLoading) {
-        return (
-            <div className='loadingSection'>
-                <div className="loading"></div>
-                <h3 className="load">Just a moment...</h3>
-            </div>
-        )
+        return <Loading />
     }
 
     if (loggedIn) {

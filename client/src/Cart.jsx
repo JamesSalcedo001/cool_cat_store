@@ -13,7 +13,7 @@ function Cart() {
     const cartItems = useSelector(state => state.cart.items)
     const totalPrice = useSelector(state => state.cart.totalPrice)
     const errors = useSelector(state => state.cart.errors)
-    const isLoading = useSelector(state => state.cart.isLoading)
+    const isLoading = useSelector(state => state.loading.isLoading)
 
 
     useEffect(() => {

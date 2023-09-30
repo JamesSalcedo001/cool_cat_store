@@ -14,6 +14,7 @@ const EditProfile = lazy(() => import('./EditProfile'));
 const Signup = lazy(() => import('./Signup'));
 const Login = lazy(() => import('./Login'));
 const Cart = lazy(() => import('./Cart'));
+import Loading from './Loading';
 
 
 
@@ -38,11 +39,7 @@ function App() {
   
   return (
     <div className="App">
-      <Suspense 
-      fallback={<div className='loadingSection'>
-                  <div className="loading"></div>
-                  <h3 className="load">Just a moment...</h3>
-                </div>}>
+      <Suspense fallback={<Loading />}>
       <Header/>
         <Routes>
         <Route path="/cart" element={<Cart/>} />
