@@ -1,4 +1,5 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+import { setIsLoading } from "./loadingSlice";
 
 const initialState = { items: [], totalPrice: 0, errors: null, isLoading: false }
 
@@ -42,9 +43,9 @@ const cartSlice = createSlice({
             state.items = state.items.filter(item => item.id !== cart_item_id)
             state.totalPrice = state.items.reduce((sum, item) => sum + (item.product.price * item.quantity), 0)
         },
-        setIsLoading: (state, action) => {
-            state.isLoading = action.payload
-        },
+        // setIsLoading: (state, action) => {
+        //     state.isLoading = action.payload
+        // },
         setErrors: (state, action) => {
             state.errors = action.payload
         },
@@ -69,5 +70,5 @@ export const fetchCartItems = () => (dispatch) => {
     })
 }
 
-export const { setCartItems, clearCart, updateCartItem, removeCartItem, setErrors, setIsLoading } = cartSlice.actions
+export const { setCartItems, clearCart, updateCartItem, removeCartItem, setErrors } = cartSlice.actions
 export default cartSlice.reducer
