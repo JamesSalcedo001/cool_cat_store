@@ -1,4 +1,4 @@
-body {
+/* body {
     background-color: #65CCB8;
 }
 
@@ -46,6 +46,9 @@ body {
     align-items: center;
     margin-top: 10rem;
 }
+
+
+
 
 .user-buttons {
     background-color: #f2f2f2;
@@ -621,6 +624,24 @@ border: #f2f2f2 solid 1px;
 }
 
 
+
+.login-signup-home {
+    background-color: #007bff;
+    color: #f2f2f2;
+    border-radius: 5px;
+    font-weight: bolder;
+    padding: 0.75rem 1.5rem;
+    margin: 0.25rem;
+    min-width: 10vw;
+    border: none;
+    cursor: pointer;
+}
+
+.login-signup-home:hover {
+    background-color: #0255ad;
+}
+
+
 .login-signup-lock {
     margin-right: 0.5rem;
 }
@@ -628,4 +649,101 @@ border: #f2f2f2 solid 1px;
 #attribution {
     position: relative;
     top: 50vh;
+} */
+
+
+body {
+    background-color: #65CCB8;
+    padding: 0.1rem 2rem;
+}
+
+.headerDiv {
+    background-color: #f2f2f2;
+    display:flex;
+    /* flex-wrap: wrap; */
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 2vw;
+    padding: 2vw;
+    max-width: 100%;
+    /* min-width: 100%; */
+    margin: 0 auto;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+
+#cat-icon {
+    flex-grow: 1;
+    max-width: 3rem;
+    margin-right: 1rem;
+    height: 100%;
+    transition: transform 0.3s ease-in;
+}
+
+#cat-icon:hover {
+    animation: bounce 0.6s infinite;
+}
+
+#home-login-links{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10rem;
+}
+
+.login-signup-home {
+    background-color: #18262b;
+    color: #f2f2f2;
+    border-radius: 1rem;
+    font-weight: bolder;
+    padding: 0.9rem 1.5rem;
+    margin-bottom: 2vh;
+    margin: 2rem auto;
+    min-width: 10rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border: #f2f2f2 solid 1px;
+}
+
+.login-signup-home:hover {
+    background-color: #f2f2f2;
+    color:#18262b;
+}
+
+#attribution {
+    position: relative;
+    top: 50vh;
+} 
+
+
+
+@media (max-width: 768px) {
+    .headerDiv {
+        padding: 1em;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #cat-icon {
+        width: 100%;
+        max-width: 3rem;
+        margin-bottom: 1rem;
+    }
+
+    .nav-buttons {
+        margin-bottom: 0.5rem;
+        font-size: 1rem;
+    }
+
+
 }
