@@ -2,7 +2,8 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import CartItemCard from "./CartItemCard";
 import { loadStripe } from "@stripe/stripe-js";
-import { fetchCartItems, setErrors, setIsLoading } from "./slices/cartSlice";
+import { fetchCartItems, setErrors } from "./slices/cartSlice";
+import { setIsLoading } from "./slices/loadingSlice"
 
 const stripeKey = import.meta.env.VITE_REACT_APP_STRIPE_PUBLIC_KEY
 const stripePromise = loadStripe(stripeKey)
