@@ -14,7 +14,6 @@ function Cart() {
     const cartItems = useSelector(state => state.cart.items)
     const totalPrice = useSelector(state => state.cart.totalPrice)
     const errors = useSelector(state => state.cart.errors)
-    const isLoading = useSelector(state => state.loading.isLoading)
 
 
     useEffect(() => {
@@ -50,14 +49,7 @@ function Cart() {
      
     }
 
-    if(isLoading) {
-        return (
-            <div className='loadingSection'>
-                <div className="loading"></div>
-                <h3 className="load">Just a moment...</h3>
-            </div>
-        )
-    } else {
+  
         return (
             <div className="cart">
                 {cartItems.map(item => (
@@ -72,8 +64,6 @@ function Cart() {
                 {errors && <h5 className="error">{errors}</h5>}
             </div>
         )
-    }
-
 }
 
 export default Cart;

@@ -4,7 +4,6 @@ import { setIsLoading } from "./loadingSlice";
 const initialState = {
     products: [],
     errors: null
-    // isLoading: false
 }
 
 const productsSlice = createSlice({
@@ -14,9 +13,6 @@ const productsSlice = createSlice({
         setProducts: (state, action) => {
             state.products = action.payload
         },
-        // setIsLoading: (state, action) => {
-        //     state.isLoading = action.payload
-        // },
         setErrors: (state, action) => {
             state.errors = action.payload
         },

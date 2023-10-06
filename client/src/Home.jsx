@@ -5,7 +5,6 @@ import { deleteUser } from "./slices/userSlice";
 import { FiLogIn } from "react-icons/fi";
 import { BiTrash } from "react-icons/bi";
 import { BiEdit } from "react-icons/bi";
-import Loading from "./Loading";
 
 
 
@@ -13,7 +12,6 @@ import Loading from "./Loading";
 function Home() {
     const user = useSelector(state => state.user.user)
     const loggedIn = useSelector(state => state.user.loggedIn)
-    const isLoading = useSelector(state => state.loading.isLoading)
 
     const dispatch = useDispatch()
     const navigate = useNavigate()
@@ -31,10 +29,6 @@ function Home() {
         } else {
             console.log("Failed to delete")
         }
-    }
-
-    if (isLoading) {
-        return <Loading />
     }
 
     if (loggedIn) {

@@ -1,4 +1,4 @@
- body {
+ /* body {
     background-color: #65CCB8;
 }
 
@@ -654,7 +654,7 @@ border: #f2f2f2 solid 1px;
 
 
 
-
+ */
 
 
 
@@ -670,7 +670,7 @@ border: #f2f2f2 solid 1px;
 /******************************* starting here is the responsive version  ********************************************/ 
 
 
-/* 
+
 body {
     background-color: #65CCB8;
     padding: 0.1rem 2rem;
@@ -743,6 +743,95 @@ body {
 } 
 
 
+.loadingSection {
+    margin: auto;
+    margin-top: 30vh;
+    text-align: center;
+}
+
+@keyframes donut-spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.loading {
+    display: inline-block;
+    border: 1rem solid #f2f2f224;
+    border-left-color:#0255ad;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: donut-spin 0.4s linear infinite;
+}
+
+.load {
+    color:#f2f2f2;
+    font-size: xx-large;
+}
+
+
+.login-div { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
+    border-radius: 10px;
+}
+
+#loginForm {
+    font-weight: bolder;
+    color: #f2f2f2;
+    text-align: center;
+    background-color: #182628;
+    border: #f2f2f2 10px solid;
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 2em;
+    border-radius: 10px;
+}
+
+
+.formInput {
+    text-align: center;
+    font-weight: bolder;
+    padding: 1em;
+    border-radius: 25px;
+    margin-top: 2%;
+    margin-bottom: 10%;
+    background-color:  #65CCB8;
+    color: #f2f2f2;
+}
+
+.formButton {
+    text-align: center;
+    font-weight: bolder;
+    padding: 0.75rem 1.5rem;
+    margin: auto;
+    margin-top: 3%;
+    width: 40%;
+    border-radius: 10px;
+    border:#18262b 1px solid;
+    min-width: 1%;
+    max-width: 40%;
+    background-color:  #3b945e;
+    color: #f2f2f2;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 3%;
+}
+
+.formButton:hover {
+    background-color:#182628;
+    border: #f2f2f2 solid 1px;
+}
+
 
 @media (max-width: 768px) {
     .headerDiv {
@@ -762,5 +851,8 @@ body {
         font-size: 1rem;
     }
 
+    .formButton {
+        width: 40%;
+    }
 
-} */
+}

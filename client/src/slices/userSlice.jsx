@@ -4,7 +4,6 @@ const initialState = {
     user: null,
     loggedIn: false,
     errors: []
-    // isLoading: false
 }
 
 const userSlice = createSlice({
@@ -19,9 +18,6 @@ const userSlice = createSlice({
             state.user = null
             state.loggedIn = false
         },
-        // setIsLoading: (state, action) => {
-        //     state.isLoading = action.payload
-        // },
         updateUser: (state, action) => {
             state.user = action.payload
         },

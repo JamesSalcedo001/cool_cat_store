@@ -43,9 +43,6 @@ const cartSlice = createSlice({
             state.items = state.items.filter(item => item.id !== cart_item_id)
             state.totalPrice = state.items.reduce((sum, item) => sum + (item.product.price * item.quantity), 0)
         },
-        // setIsLoading: (state, action) => {
-        //     state.isLoading = action.payload
-        // },
         setErrors: (state, action) => {
             state.errors = action.payload
         },

@@ -7,8 +7,6 @@ import Loading from "./Loading";
 
 function ProductsList() {
     const products = useSelector(state => state.products.products)
-    const isLoading = useSelector(state => state.loading.isLoading)
-
 
     const dispatch = useDispatch()
 
@@ -23,9 +21,7 @@ function ProductsList() {
         ))
     ), [products])
 
-    if (isLoading) {
-        return <Loading />
-    } else {
+
         return (
             <div className="products-list">
                 <Suspense fallback={<Loading />}>
@@ -33,7 +29,6 @@ function ProductsList() {
                 </Suspense>
             </div>
         )
-    }
 }
 
 export default ProductsList;
