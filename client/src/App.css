@@ -1,4 +1,4 @@
- /* body {
+ body {
     background-color: #65CCB8;
 }
 
@@ -654,11 +654,6 @@ border: #f2f2f2 solid 1px;
 
 
 
- */
-
-
-
-
 
 
 
@@ -669,7 +664,7 @@ border: #f2f2f2 solid 1px;
 
 /******************************* starting here is the responsive version  ********************************************/ 
 
-
+/* 
 
 body {
     background-color: #65CCB8;
@@ -905,7 +900,6 @@ body {
     flex-direction: column;
     align-items: center;
     padding: 2em;
-    /* border-radius: 10px; */
 }
 
 #loginForm {
@@ -931,7 +925,6 @@ body {
     flex-direction: column;
     align-items: center;
     padding: 2em;
-    /* border-radius: 10rem; */
 }
 
 #signup-form {
@@ -1007,4 +1000,4 @@ body {
         width: 40%;
     }
 
-}
+} */
