@@ -37,23 +37,23 @@ function Header() {
     }
 
     return (
-        <div className="headerDiv">
+        <>
             { loggedIn ? (
-                <>
+                <div className="headerDiv">
                     <img id="cat-icon" src={catLogo} alt="cat-icon"/>
                     <button className="nav-buttons" onClick={logOutUser}><FiLogOut id="logout-icon"/> Log Out!</button>
                     <NavLink className="nav-buttons" to="/"><BiHome id="home-icon"/>Profile</NavLink>
                     <NavLink className="nav-buttons" to="/products_list"><BiShoppingBag id="product-icon"/> Products</NavLink>
                     <NavLink className="nav-buttons" to="/cart"><FiShoppingCart id="cart-icon"/> Cart</NavLink>
-                </>
+                </div>
                 ) : (
-                    <>
-                        <img id="cat-icon" src={catLogo} alt="cat-icon"/>
+                    <div className="headerDiv-logged-out">
+                        <img id="cat-icon-logged-out" src={catLogo} alt="cat-icon"/>
                         <h1 id="header-message">Hey, I'm Cool Cat! Welcome to my shop!</h1>
-                    </>
+                    </div>
 
              )}
-        </div>
+        </>
     )
 }
 
