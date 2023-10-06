@@ -744,13 +744,12 @@ body {
     align-items: center;
     border-radius: 2em;
     padding: 2vw;
-    max-width: 100%;
     margin: 0 auto;
 } 
 
 .headerDiv-logged-out {
     background-color: #f2f2f2;
-    border-radius: 10px;
+    border-radius: 2em;
     display:flex;
     flex-direction: column;
     justify-content: center;
@@ -906,7 +905,7 @@ body {
     flex-direction: column;
     align-items: center;
     padding: 2em;
-    border-radius: 10px;
+    /* border-radius: 10px; */
 }
 
 #loginForm {
@@ -919,9 +918,35 @@ body {
     max-width: 400px;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 2rem;
     padding: 2em;
-    border-radius: 10px;
+    border-radius: 2rem;
+}
+
+
+.signup-div {
+    margin-top: 10rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 2em;
+    /* border-radius: 10rem; */
+}
+
+#signup-form {
+    font-weight: bolder;
+    color: #f2f2f2;
+    text-align: center;
+    background-color: #182628;
+    border: #f2f2f2 1rem solid;
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2em;
+    border-radius: 2em;
 }
 
 
