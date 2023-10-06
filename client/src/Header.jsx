@@ -42,9 +42,21 @@ function Header() {
                 <div className="headerDiv">
                     <img id="cat-icon" src={catLogo} alt="cat-icon"/>
                     <button className="nav-buttons" onClick={logOutUser}><FiLogOut id="logout-icon"/> Log Out!</button>
-                    <NavLink className="nav-buttons" to="/"><BiHome id="home-icon"/>Profile</NavLink>
-                    <NavLink className="nav-buttons" to="/products_list"><BiShoppingBag id="product-icon"/> Products</NavLink>
-                    <NavLink className="nav-buttons" to="/cart"><FiShoppingCart id="cart-icon"/> Cart</NavLink>
+                    <NavLink to="/">
+                        <button className="nav-buttons">
+                            <BiHome id="home-icon"/>Profile
+                        </button>
+                    </NavLink>
+                    <NavLink to="/products_list">
+                        <button className="nav-buttons">
+                            <BiShoppingBag id="product-icon"/> Products
+                        </button>
+                    </NavLink>
+                    <NavLink to="/cart">
+                        <button className="nav-buttons" >
+                            <FiShoppingCart id="cart-icon"/> Cart
+                        </button>
+                    </NavLink>
                 </div>
                 ) : (
                     <div className="headerDiv-logged-out">
