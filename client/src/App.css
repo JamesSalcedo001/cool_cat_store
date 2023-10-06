@@ -681,6 +681,7 @@ body {
     border-radius: 50%;
     height: auto;
     width: 50%;
+    margin: auto;
     max-width: 50%;
     margin-bottom: 2rem;
     padding: 3rem;
@@ -710,6 +711,29 @@ body {
     padding: 2rem;
     text-align: center;
 }
+
+.user-buttons {
+    background-color: #f2f2f2;
+    color: #182628;
+    font-weight: bolder;
+    padding: 0.75rem 1.5rem;
+    border: #f2f2f2 solid 1px;
+    cursor: pointer;
+    margin-inline: 1rem;
+    margin-top: 3.5rem;
+    margin-bottom: 0.3rem;
+    min-width: 7rem;
+    max-width: 40%;
+    border-radius: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.user-buttons:hover {
+    background-color: #182628;
+    color: #f2f2f2;
+}
+
 
 
 .headerDiv {
@@ -743,10 +767,8 @@ body {
 
 
 .nav-buttons {
-    /* margin-inline: 1em; */
     min-width: 15rem;
     padding: 2vh;
-    /* flex-grow: 1; */
     background-color: #18262b;
     color: #f2f2f2;
     border-radius: 3vw;
@@ -878,8 +900,10 @@ body {
 
 
 .login-div { 
+    margin-top: 10rem;
     display: flex;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
     padding: 2em;
     border-radius: 10px;
@@ -890,7 +914,7 @@ body {
     color: #f2f2f2;
     text-align: center;
     background-color: #182628;
-    border: #f2f2f2 10px solid;
+    border: #f2f2f2 1rem solid;
     width: 100%;
     max-width: 400px;
     display: flex;
@@ -919,10 +943,9 @@ body {
     margin: auto;
     margin-top: 3%;
     width: 40%;
-    border-radius: 10px;
+    border-radius: 1rem;
     border:#18262b 1px solid;
-    min-width: 1%;
-    max-width: 40%;
+    min-width: 9rem;
     background-color:  #3b945e;
     color: #f2f2f2;
     cursor: pointer;
