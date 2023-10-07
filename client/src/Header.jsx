@@ -42,17 +42,17 @@ function Header() {
                 <div className="headerDiv">
                     <img id="cat-icon" src={catLogo} alt="cat-icon"/>
                     <button className="nav-buttons" onClick={logOutUser}><FiLogOut id="logout-icon"/> Log Out!</button>
-                    <NavLink to="/">
+                    <NavLink className="nav-links" to="/">
                         <button className="nav-buttons">
                             <BiHome id="home-icon"/>Profile
                         </button>
                     </NavLink>
-                    <NavLink to="/products_list">
+                    <NavLink className="nav-links" to="/products_list">
                         <button className="nav-buttons">
                             <BiShoppingBag id="product-icon"/> Products
                         </button>
                     </NavLink>
-                    <NavLink to="/cart">
+                    <NavLink className="nav-links" to="/cart">
                         <button className="nav-buttons" >
                             <FiShoppingCart id="cart-icon"/> Cart
                         </button>
