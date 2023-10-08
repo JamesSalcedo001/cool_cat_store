@@ -179,7 +179,12 @@
     top: 50vh;
 } 
 
-
+#product-image {
+    width: 18vw;
+    height: 23vh;
+    border-radius: 2vh;
+    margin-right: 3vw;
+}
 
 .headerDiv {
     background-color: #f2f2f2;
@@ -380,12 +385,7 @@
     transform: scale(1.05);
 }
 
-#product-image {
-    width: 18vw;
-    height: 23vh;
-    border-radius: 2vh;
-    margin-right: 3vw;
-}
+
 
 .products-list {
     padding: 4vh;
@@ -525,7 +525,7 @@ border: #f2f2f2 solid 1px;
 
 
 
-
+/* 
 .card-content {
     display: flex;
     flex-direction: column;
@@ -564,7 +564,7 @@ border: #f2f2f2 solid 1px;
 .card-button:hover {
     background-color: #f2f2f2;
     color:#18262b;
-}
+} */
 
 
 
@@ -859,6 +859,87 @@ body {
         transform: translateY(-15px);
     }
 }
+
+
+#product-image {
+    width: 18vw;
+    height: 23vh;
+    border-radius: 2vh;
+    margin-right: 3vw;
+}
+
+
+
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    width: 50%;
+    padding-left: 3vw;
+    margin-left: 2vw;
+    margin-bottom: 3vh;
+}
+
+
+.card-button {
+    background-color: #18262b;
+    color: #f2f2f2;
+    padding: 0.5em 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 1em;
+    min-width: 100px;
+    max-width: 200px;
+    transition: background-color 0.3s ease;
+    border: #f2f2f2 solid 1px;
+}
+
+@media only screen and (max-width: 600px){
+    #product-image {
+        width: 70vw;
+        height: auto;
+        margin-right: 0;
+        margin-bottom: 2vh;
+    }
+
+    .card {
+        flex-direction: column;
+        align-items: center;
+        min-height: auto;
+        padding: 2vh;
+        width: 90vw;
+    }
+
+    .card-content {
+        width: 100%;
+        padding-left: 0;
+        margin-left: 0;
+    }
+    
+    .card-button {
+        padding: 0.4em;
+        font-size: 0.9em;
+    }
+
+    .products-list {
+        padding: 2vh;
+        margin-top: 10vh;
+        margin-bottom: 20vh;
+    }
+} 
+
+.card-button:hover {
+    background-color: #f2f2f2;
+    color:#18262b;
+}
+
+
+
 
 
 #cat-icon {
