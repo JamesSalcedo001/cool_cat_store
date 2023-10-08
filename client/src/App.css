@@ -901,18 +901,18 @@ body {
 
 @media only screen and (max-width: 600px){
     #product-image {
-        width: 70vw;
+        width: 10rem;
         height: auto;
         margin-right: 0;
-        margin-bottom: 2vh;
+        margin-bottom: 2rem;
     }
 
     .card {
         flex-direction: column;
         align-items: center;
         min-height: auto;
-        padding: 2vh;
-        width: 90vw;
+        padding: 2em;
+        width: 40rem;
     }
 
     .card-content {
@@ -927,9 +927,9 @@ body {
     }
 
     .products-list {
-        padding: 2vh;
-        margin-top: 10vh;
-        margin-bottom: 20vh;
+        padding: 2em;
+        margin-top: 10rem;
+        margin-bottom: 20rem;
     }
 } 
 
