@@ -720,6 +720,7 @@ body {
     .cart-item-image {
         width: 20rem;
         height: 20rem;
+        max-height: 20rem;
         margin-right: 0;
         margin-bottom: 1rem;
     }
@@ -734,7 +735,7 @@ body {
     }
 
     #cart-item-input, #cart-item-button {
-        min-width: 95px;
+        min-width: 3rem;
     }
 
     .card-button {
@@ -819,7 +820,7 @@ body {
         border-radius: 0.5rem;
         width: 10rem;
         min-height: 10rem;
-        max-width: 10rem;
+        max-height: 10rem;
     }
 
     .cart-item-info h2, .cart-item-info h3 {
