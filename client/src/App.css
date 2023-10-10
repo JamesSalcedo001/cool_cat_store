@@ -866,23 +866,24 @@ body {
 
 
 #product-image {
-    width: 18vw;
-    height: 23vh;
-    border-radius: 2vh;
-    margin-right: 3vw;
+    width: 13rem;
+    height: 13rem;
+    border-radius: 1rem;
+    margin-right: 3rem;
 }
 
 .products-list {
-    padding: 4vh;
-    margin-top: 20vh;
     background-color: #2d784b;
+    border-radius: 2rem;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20rem;
     display: flex;
     align-items: center;
     flex-direction: column;
-    min-width: fit-content;
-    height: fit-content;
-    border-radius: 3vh;
-    margin-bottom: 40vh;
+    min-height: fit-content;
+    margin-bottom: 40rem;
 }
 
 
@@ -890,18 +891,17 @@ body {
     display: flex;
     align-items: center;
     background-color: #182628;
-    min-height: 25vh;
-    max-height: 35vh;
-    width: 80vw;
-    max-width: 800px;
-    min-width: 300px;
-    border: 2px solid black;
-    border-radius: 2vh;
+    border-radius: 2rem;
     transition: transform 0.3s ease;
-    text-align: center;
     color: #f2f2f2;
-    padding: 3vh;
-    margin-bottom: 5vh;
+    height: 15rem;
+    width: 70rem;
+    max-width: 70rem;
+    min-width: 30rem;
+    border: 0.2rem solid black;
+    text-align: center;
+    padding: 0.5rem;
+    margin-bottom: 2rem;
 }
 
 .card:hover {
@@ -910,83 +910,55 @@ body {
 
 
 
-.card-content {
+ /* .card-content {
+    background-color: #007bff;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
+    align-items:center;
     height: 100%;
     width: 50%;
     padding-left: 3vw;
     margin-left: 2vw;
     margin-bottom: 3vh;
+} */
+
+.card-content {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
 }
 
+.card-title {
+    font-size: 1.5em;
+    margin-bottom: 1em;
+}
+
+.card-price {
+    font-size: 1.2em;
+    margin-bottom: 1em;
+}
 
 .card-button {
     background-color: #18262b;
     color: #f2f2f2;
     padding: 0.5em 1em;
     border: none;
-    border-radius: 5px;
+    border-radius: 0.3em;
     cursor: pointer;
-    margin-top: 10px;
+    margin-top: 0.6em;
     font-size: 1em;
     min-width: 100px;
     max-width: 200px;
     transition: background-color 0.3s ease;
-    border: #f2f2f2 solid 1px;
+    border: #f2f2f2 solid 0.05em;
 }
-
-@media only screen and (max-width: 600px){
-    #product-image {
-        width: 5rem;
-        height: 5rem;
-        margin-right: 0;
-        margin-bottom: 2rem;
-    }
-
-    .products-list {
-        margin: 0 auto;
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        min-width: fit-content;
-        height: fit-content;
-    }
-
-    .card {
-        flex-direction: column;
-        align-items: center;
-        min-height: auto;
-        padding: 2rem;
-        width: 10%;
-    }
-
-    .card-content {
-        width: 100%;
-        padding-left: 0;
-        margin-left: 0;
-    }
-    
-    .card-button {
-        padding: 0.4em;
-        font-size: 0.9em;
-    }
-
-    .products-list {
-        padding: 2em;
-        margin-top: 10rem;
-        margin-bottom: 20rem;
-    }
-} 
 
 .card-button:hover {
     background-color: #f2f2f2;
     color:#18262b;
 }
-
-
 
 
 
@@ -1188,6 +1160,49 @@ body {
 
 
 @media (max-width: 768px) {
+
+
+    #product-image {
+        width: 5rem;
+        height: 5rem;
+        margin-right: 0;
+        margin-bottom: 2rem;
+    }
+
+    .products-list {
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        min-width: fit-content;
+        height: fit-content;
+    }
+
+    .card {
+        flex-direction: column;
+        align-items: center;
+        min-height: auto;
+        padding: 2rem;
+        width: 10%;
+    }
+
+    .card-content {
+        width: 100%;
+        padding-left: 0;
+        margin-left: 0;
+    }
+    
+    .card-button {
+        padding: 0.4em;
+        font-size: 0.9em;
+    }
+
+    .products-list {
+        padding: 2em;
+        margin-top: 10rem;
+        margin-bottom: 20rem;
+    }
+
     .headerDiv {
         padding: 1em;
         flex-direction: column;
@@ -1253,3 +1268,26 @@ body {
     }
     
 } 
+
+
+@media only screen and (max-width: 600px) {
+    .card {
+        flex-direction: column;
+        height: auto;
+        padding: 1rem;
+    }
+
+    #product-image {
+        width: 70%;
+        margin: 0 auto;
+        margin-bottom: 1.5rem;
+    }
+
+    .card-content {
+        width: 100%;
+        text-align: center;
+        align-items: center;
+    }
+
+
+}
