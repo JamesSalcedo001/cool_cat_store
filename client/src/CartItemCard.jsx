@@ -46,13 +46,16 @@ function CartItemCard ({ item }) {
     return (
         <div className="cart-item-card">
             <img className="cart-item-image" src={item.product.image} alt={item.product.title}/>
-            <h2 className="cart-item-title">{item.product.title}</h2>
-            <h3 className="cart-item-price">Price: ${(item.product.price / 100).toFixed(2)}</h3>
-            <label id="cart-quantity">
-                Quantity:
+            <div className="cart-item-info">
+                <h2 className="cart-item-title">{item.product.title}</h2>
+                <h3 className="cart-item-price">Price: ${(item.product.price / 100).toFixed(2)}</h3>
+            </div>
+            <div className="cart-item-actions">
+                <label id="cart-quantity">Quantity: </label>
                 <input id="cart-item-input" type="number" value={item.quantity} onChange={quantityChange}/>
-            </label>
-            <button id="cart-item-button" onClick={removeClick}>Remove <FiDelete id="delete-icon-cart"/></button>
+
+                <button id="cart-item-button" onClick={removeClick}>Remove <FiDelete id="delete-icon-cart"/></button>
+            </div>
         </div>
     )
 }
