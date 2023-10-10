@@ -1,7 +1,7 @@
 .cart-item-image {
     flex: 1;
-    width: 10rem;
-    height: 10rem;
+    width: 15rem;
+    height: 15rem;
     border-radius: 1rem;
     margin-right: 1rem;
 }
@@ -718,8 +718,8 @@ body {
     }
 
     .cart-item-image {
-        width: 10rem;
-        height: 10rem;
+        width: 20rem;
+        height: 20rem;
         margin-right: 0;
         margin-bottom: 1rem;
     }
@@ -734,7 +734,7 @@ body {
     }
 
     #cart-item-input, #cart-item-button {
-        width: 100%;
+        min-width: 95px;
     }
 
     .card-button {
@@ -818,7 +818,8 @@ body {
     .cart-item-image {
         border-radius: 0.5rem;
         width: 10rem;
-        height: 10rem;
+        min-height: 10rem;
+        max-width: 10rem;
     }
 
     .cart-item-info h2, .cart-item-info h3 {
