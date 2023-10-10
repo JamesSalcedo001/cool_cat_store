@@ -344,13 +344,6 @@
 } */
 
 
-.cart-item-image {
-    width: 18vw;
-    height: 23vh;
-    border-radius: 2vh;
-    margin-right: 3vw;
-}
-
 /* .edit-profile {
     margin-top: 20vh;
     display: flex;
@@ -398,6 +391,58 @@
     border-radius: 3vh;
     margin-bottom: 40vh;
 } */
+
+
+
+
+/* 
+.card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    width: 50%;
+    padding-left: 3vw;
+    margin-left: 2vw;
+    margin-bottom: 3vh;
+}
+
+
+.card-button {
+    background-color: #18262b;
+    color: #f2f2f2;
+    padding: 0.5em 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 1em;
+    min-width: 100px;
+    max-width: 200px;
+    transition: background-color 0.3s ease;
+    border: #f2f2f2 solid 1px;
+}
+
+@media only screen and (max-width: 600px){
+    .card-button {
+        padding: 0.4em;
+        font-size: 0.9em;
+    }
+} 
+
+.card-button:hover {
+    background-color: #f2f2f2;
+    color:#18262b;
+} */
+
+
+.cart-item-image {
+    width: 18vw;
+    height: 23vh;
+    border-radius: 2vh;
+    margin-right: 3vw;
+}
 
 .cart {
     padding: 8vh;
@@ -522,50 +567,6 @@ border: #f2f2f2 solid 1px;
 .cart-item-price {
     margin-right: 1.5vw;
 }
-
-
-
-/* 
-.card-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    height: 100%;
-    width: 50%;
-    padding-left: 3vw;
-    margin-left: 2vw;
-    margin-bottom: 3vh;
-}
-
-
-.card-button {
-    background-color: #18262b;
-    color: #f2f2f2;
-    padding: 0.5em 1em;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 10px;
-    font-size: 1em;
-    min-width: 100px;
-    max-width: 200px;
-    transition: background-color 0.3s ease;
-    border: #f2f2f2 solid 1px;
-}
-
-@media only screen and (max-width: 600px){
-    .card-button {
-        padding: 0.4em;
-        font-size: 0.9em;
-    }
-} 
-
-.card-button:hover {
-    background-color: #f2f2f2;
-    color:#18262b;
-} */
-
 
 
 
@@ -878,7 +879,7 @@ body {
     padding: 3rem;
     display: flex;
     flex-direction: column;
-    margin-top: 20rem;
+    margin-top: 5rem;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -896,8 +897,6 @@ body {
     color: #f2f2f2;
     height: 15rem;
     width: 70rem;
-    max-width: 70rem;
-    min-width: 30rem;
     border: 0.2rem solid black;
     text-align: center;
     padding: 0.5rem;
@@ -907,20 +906,6 @@ body {
 .card:hover {
     transform: scale(1.05);
 }
-
-
-
- /* .card-content {
-    background-color: #007bff;
-    display: flex;
-    flex-direction: column;
-    align-items:center;
-    height: 100%;
-    width: 50%;
-    padding-left: 3vw;
-    margin-left: 2vw;
-    margin-bottom: 3vh;
-} */
 
 .card-content {
     width: 70%;
@@ -1162,23 +1147,23 @@ body {
 @media (max-width: 768px) {
 
 
-    #product-image {
+    /* #product-image {
         width: 5rem;
         height: 5rem;
         margin-right: 0;
         margin-bottom: 2rem;
-    }
+    } */
 
-    .products-list {
+    /* .products-list {
         margin: 0 auto;
         display: flex;
         align-items: center;
         flex-direction: column;
         min-width: fit-content;
         height: fit-content;
-    }
+    } */
 
-    .card {
+    /* .card {
         flex-direction: column;
         align-items: center;
         min-height: auto;
@@ -1190,18 +1175,18 @@ body {
         width: 100%;
         padding-left: 0;
         margin-left: 0;
-    }
+    } */
     
     .card-button {
         padding: 0.4em;
         font-size: 0.9em;
     }
-
+/* 
     .products-list {
         padding: 2em;
         margin-top: 10rem;
         margin-bottom: 20rem;
-    }
+    } */
 
     .headerDiv {
         padding: 1em;
@@ -1271,14 +1256,17 @@ body {
 
 
 @media only screen and (max-width: 600px) {
+
     .card {
         flex-direction: column;
         height: auto;
+        width: fit-content;
         padding: 1rem;
     }
 
     #product-image {
-        width: 70%;
+        width: 10rem;
+        height: 10rem;
         margin: 0 auto;
         margin-bottom: 1.5rem;
     }
