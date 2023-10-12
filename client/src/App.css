@@ -742,6 +742,10 @@ body {
 
 @media (max-width: 768px) {
 
+    .formInput {
+        font-size: 16px;
+    }
+
     .footer {
         flex-direction: column;
         align-items: center;
@@ -760,8 +764,6 @@ body {
     }
 
     .cart-item-info {
-        /* margin-right: 0;
-        margin-bottom: 1rem; */
         width: 100%;
         text-align: center;
     }
@@ -849,6 +851,11 @@ body {
 
 
 @media only screen and (max-width: 600px) {
+
+    .formInput {
+        font-size: 16px;
+    }
+
 
     .cart {
         max-width: 100%;
