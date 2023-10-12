@@ -308,6 +308,7 @@ body {
     color: rgb(177, 22, 22);
     font-size: xx-large;
     list-style: none;
+    text-align: center;
 }
 
 ::placeholder {
@@ -487,7 +488,8 @@ body {
     transition: transform 0.3s ease;
     color: #f2f2f2;
     height: 15rem;
-    width: 70rem;
+    width: 85%;
+    /* width: 70rem; */
     border: 0.2rem solid black;
     text-align: center;
     padding: 0.5rem;
