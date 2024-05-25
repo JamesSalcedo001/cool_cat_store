@@ -47,10 +47,10 @@ function Home() {
         return (
             <div id="home-login-links">
                 <NavLink to="/log_in">
-                    <button className="login-signup-home"><FiLogIn/> Log In!</button>
+                    <button className="login-signup-home"><FiLogIn className="login-signup-link-icon"/> Log In!</button>
                 </NavLink>
                 <NavLink to="/sign_up">
-                    <button className="login-signup-home"><FiLogIn/> Sign Up!</button>
+                    <button className="login-signup-home"><FiLogIn className="login-signup-link-icon"/> Sign Up!</button>
                 </NavLink>
             </div>
         )

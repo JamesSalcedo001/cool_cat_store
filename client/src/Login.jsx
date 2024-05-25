@@ -52,7 +52,7 @@ function Login() {
 
     return (
         <div className="login-div">
-            <form id="loginForm" onSubmit={submit}>
+            <form id="login-form" onSubmit={submit}>
                 <label htmlFor="username">Username</label>
                 <input className="formInput" placeholder="username" type="text" name="username" autoComplete="username" onChange={changeHandler} value={username} />
 

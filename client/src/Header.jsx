@@ -61,7 +61,6 @@ function Header() {
                 ) : (
                     <div className="headerDiv-logged-out">
                         <img id="cat-icon-logged-out" src={catLogo} alt="cat-icon"/>
-                        <h1 id="header-message">Hey, I'm Cool Cat! Welcome to my shop!</h1>
                     </div>
 
              )}

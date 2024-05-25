@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { updateUser, setErrors } from "./slices/userSlice";
 import { useNavigate } from "react-router-dom";
+import { FiEdit } from "react-icons/fi";
 
 
 function EditProfile() {
@@ -47,18 +48,20 @@ function EditProfile() {
 
 
     return (
-        <div className="edit-profile">
-            <form className="edit-form" onSubmit={submit}>
+        <div className="edit-profile-div">
+            <form id="edit-profile-form" onSubmit={submit}>
             <h2 id="title-edit">Edit Profile</h2>
                 <label htmlFor="username">Username</label>
-                <input type="text" className="formInput" value={username} name="username" autoComplete="username" onChange={changeHandler}/>
+                <input type="text" className="formInput" placeholder="username" value={username} name="username" autoComplete="username" onChange={changeHandler}/>
 
                 <label htmlFor="password">Password</label>
-                <input type="password" className="formInput" value={password} name="password" autoComplete="current-password" onChange={changeHandler}/>
+                <input type="password" className="formInput" placeholder="password" value={password} name="password" autoComplete="current-password" onChange={changeHandler}/>
 
                 <label htmlFor="avatar">Avatar</label>
-                <input type="text" className="formInput" value={avatar} name="avatar" onChange={changeHandler}/>
-                <button className="formButton" type="submit">Update Profile!</button>
+                <input type="text" className="formInput" placeholder="avatar URL" value={avatar} name="avatar" onChange={changeHandler}/>
+                <button className="formButton" type="submit">
+                    <FiEdit className="login-signup-lock"/> Update Profile!
+                </button>
             </form>
             {errors && errors.map((e, ind) => <h5 key={ind} className="error">{e}</h5>)}
         </div>
